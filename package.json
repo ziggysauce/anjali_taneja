@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ziggysauce/anjalixmusic.git"
+    "url": "git+https://github.com/ziggysauce/anjali_taneja.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/ziggysauce/anjalixmusic#readme",
+  "homepage": "https://github.com/ziggysauce/anjali_taneja#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",

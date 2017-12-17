@@ -11,8 +11,8 @@ Artist webpage
 Artist webpage for Anjali Taneja, based in Washington, D.C. Includes her biography, music, videos, and other content to find out more about her.
 
 ## Contributing
-[Instructions](https://github.com/ziggysauce/anjalixmusic/blob/master/CONTRIBUTING.md)
-[License](https://github.com/ziggysauce/anjalixmusic/blob/master/LICENSE.md)
+[Instructions](https://github.com/ziggysauce/anjali_taneja/blob/master/CONTRIBUTING.md)
+[License](https://github.com/ziggysauce/anjali_taneja/blob/master/LICENSE.md)
 
 ## Built With
 * HTML5
