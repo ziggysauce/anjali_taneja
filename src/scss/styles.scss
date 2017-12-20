@@ -1,1 +1,146 @@
 // Main styling sheet for webpage
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+/* ----------------------------------------
+------------ NAVBAR STYLES ----------------
+---------------------------------------- */
+.navbar_wrapper {
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // height: 4em;
+  padding: 0px 50px;
+  background-color: #1f1f1f;
+  color: #6f6f6f;
+}
+
+.nav_contact_info {
+  border: 2px solid cyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.nav_connect_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  li {
+    list-style-type: none;
+    padding: 0px 20px 0px 10px;
+  }
+
+  i {
+    color: #6f6f6f;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.nav_links {
+  border: 2px solid green;
+
+  ul {
+    border: 2px solid pink;
+    margin: 0;
+    // padding: 20px;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      // padding: 0px 40px;
+    }
+  }
+
+  a {
+    // border: 1px solid magenta;
+    color: #6f6f6f;
+    text-decoration: none;
+    padding: 25px 20px;
+    margin: 0px 30px;
+
+    &:hover {
+      color: #fff;
+      border-bottom: 3px solid papayawhip;
+    }
+  }
+}
+
+/* ----------------------------------------
+------------ FOOTER STYLES ----------------
+---------------------------------------- */
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #1f1f1f;
+  color: #6f6f6f;
+}
+
+.footer_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 0px;
+}
+
+.artist_logo {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding: 15px;
+
+  a {
+    text-decoration: none;
+    color: #6f6f6f;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.contact_info {
+  border: 2px solid cyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.connect_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  li {
+    list-style-type: none;
+    padding: 0px 20px 0px 10px;
+  }
+
+  i {
+    color: #6f6f6f;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
