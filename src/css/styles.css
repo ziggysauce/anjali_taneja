@@ -38,20 +38,82 @@ html, body {
   .nav_links ul {
     border: 2px solid pink;
     margin: 0;
+    padding: 0;
     height: 100%;
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center; }
+  .nav_links li:last-child {
+    display: none; }
   .nav_links a {
+    border: 1px solid magenta;
     color: #6f6f6f;
     text-decoration: none;
-    padding: 25px 20px;
-    margin: 0px 30px; }
+    padding: 25px 20px; }
     .nav_links a:hover {
       color: #fff;
       border-bottom: 3px solid papayawhip; }
+  @media (max-width: 800px) {
+    .nav_links {
+      background-color: papayawhip; }
+      .nav_links li:not(:last-child) {
+        display: none; }
+      .nav_links li:last-child {
+        display: flex;
+        color: cyan; }
+      .nav_links a {
+        padding: 25px 0px;
+        display: flex;
+        flex-direction: column; }
+        .nav_links a:hover {
+          border: 1px solid transparent; }
+          .nav_links a:hover .iconbar:nth-of-type(1) {
+            top: 4px;
+            transition-delay: 200ms;
+            -webkit-transition-delay: 200ms;
+            -moz-transition-delay: 200ms;
+            transform: rotate(45deg);
+            background: lightgreen; }
+          .nav_links a:hover .iconbar:nth-of-type(2) {
+            transform: translateX(100px);
+            transition-delay: 100ms;
+            -webkit-transition-delay: 100ms;
+            -moz-transition-delay: 100ms; }
+          .nav_links a:hover .iconbar:nth-of-type(3) {
+            top: 0px;
+            transition-delay: 200ms;
+            -webkit-transition-delay: 200ms;
+            -moz-transition-delay: 200ms;
+            transform: rotate(-45deg); }
+      .nav_links .iconbar:nth-of-type(1) {
+        top: -6px;
+        background: violet; }
+      .nav_links .iconbar:nth-of-type(2) {
+        top: 1px;
+        background: #2F4763; }
+      .nav_links .iconbar:nth-of-type(3) {
+        top: 8px;
+        background: violet; }
+      .nav_links .iconbar {
+        position: relative;
+        width: 30px;
+        height: 2px;
+        transition: all 800ms ease-in-out;
+        -webkit-transition: all 800ms ease-in-out;
+        -moz-transition: all 800ms ease-in-out; } }
+
+@media (max-width: 465px) {
+  .navbar_wrapper {
+    background-color: blue; }
+  .nav_connect_links {
+    display: none; }
+  .nav_contact_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 10px; } }
 
 /* ----------------------------------------
 ------------ FOOTER STYLES ----------------

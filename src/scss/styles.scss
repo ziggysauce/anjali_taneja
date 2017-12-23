@@ -52,6 +52,7 @@ html, body {
   ul {
     border: 2px solid pink;
     margin: 0;
+    padding: 0;
     // padding: 20px;
     height: 100%;
     list-style-type: none;
@@ -59,23 +60,112 @@ html, body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
 
-    li {
-      // padding: 0px 40px;
-    }
+  // Hide mobile nav button
+  li:last-child {
+    display: none;
   }
 
   a {
-    // border: 1px solid magenta;
+    border: 1px solid magenta;
     color: #6f6f6f;
     text-decoration: none;
     padding: 25px 20px;
-    margin: 0px 30px;
 
     &:hover {
       color: #fff;
       border-bottom: 3px solid papayawhip;
     }
+  }
+
+  // CSS for tablet nav bar
+  @media (max-width: 800px) {
+    background-color: papayawhip;
+
+    li:not(:last-child) {
+      display: none;
+    }
+
+    li:last-child {
+      display: flex;
+      color: cyan;
+    }
+
+    a {
+      padding: 25px 0px;
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        border: 1px solid transparent;
+
+        .iconbar:nth-of-type(1) {
+          top: 4px;
+          transition-delay: 200ms;
+          -webkit-transition-delay: 200ms;
+          -moz-transition-delay: 200ms;
+          transform: rotate(45deg);
+          background: lightgreen;
+        }
+
+        .iconbar:nth-of-type(2) {
+          transform: translateX(100px);
+          transition-delay: 100ms;
+          -webkit-transition-delay: 100ms;
+          -moz-transition-delay: 100ms;
+        }
+
+        .iconbar:nth-of-type(3) {
+          top: 0px;
+          transition-delay: 200ms;
+          -webkit-transition-delay: 200ms;
+          -moz-transition-delay: 200ms;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    // Hamburger Styles and animation
+    .iconbar:nth-of-type(1) {
+      top: -6px;
+      background: violet;
+
+    }.iconbar:nth-of-type(2) {
+      top: 1px;
+      background: #2F4763;
+    }
+
+    .iconbar:nth-of-type(3) {
+      top: 8px;
+      background: violet;
+    }
+
+    .iconbar {
+      position: relative;
+      width: 30px;
+      height: 2px;
+      transition: all 800ms ease-in-out;
+      -webkit-transition: all 800ms ease-in-out;
+      -moz-transition: all 800ms ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 465px) {
+  .navbar_wrapper {
+    background-color: blue;
+  }
+
+  .nav_connect_links {
+    display: none;
+  }
+
+  .nav_contact_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 10px;
   }
 }
 
