@@ -3,24 +3,25 @@
 html, body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* ----------------------------------------
 ------------ NAVBAR STYLES ----------------
 ---------------------------------------- */
 .navbar_wrapper {
-  border: 2px solid blue;
+  // border: 2px solid blue;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  // height: 4em;
+  height: 5em;
   padding: 0px 50px;
   background-color: #1f1f1f;
   color: #6f6f6f;
 }
 
 .nav_contact_info {
-  border: 2px solid cyan;
+  // border: 2px solid cyan;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,14 +48,15 @@ html, body {
 }
 
 .nav_links {
-  border: 2px solid green;
+  // border: 2px solid orange;
 
   ul {
-    border: 2px solid pink;
+    // border: 2px solid pink;
     margin: 0;
     padding: 0;
     // padding: 20px;
     height: 100%;
+    min-width: 35px;
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -68,7 +70,7 @@ html, body {
   }
 
   a {
-    border: 1px solid magenta;
+    // border: 1px solid magenta;
     color: #6f6f6f;
     text-decoration: none;
     padding: 25px 20px;
@@ -81,7 +83,7 @@ html, body {
 
   // CSS for tablet nav bar
   @media (max-width: 800px) {
-    background-color: papayawhip;
+    // background-color: papayawhip;
 
     li:not(:last-child) {
       display: none;
@@ -89,8 +91,51 @@ html, body {
 
     li:last-child {
       display: flex;
-      color: cyan;
     }
+
+    // CSS for mobile nav pop-up
+    // .active_nav {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: flex-start;
+    //   position: absolute;
+    //   height: 100%;
+    //   z-index: 5;
+    //   right: 0;
+    //   top: 0;
+    //   background: rgba(0,0,0,0.9);
+    //
+    //   li:first-of-type {
+    //     margin-top: 10em;
+    //   }
+    //
+    //   li {
+    //     text-align: center;
+    //
+    //     width: 250px;
+    //   }
+    //
+    //   li:last-of-type {
+    //     display: flex;
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     width: 50px;
+    //
+    //     a:hover {
+    //       border: 1px solid transparent;
+    //     }
+    //   }
+
+    //   a {
+    //     border: 1px solid transparent;
+    //     margin: 0px auto;
+    //   }
+    //
+    //   a:hover {
+    //     border-left: 10px solid papayawhip;
+    //   }
+    // }
 
     a {
       padding: 25px 0px;
@@ -100,13 +145,14 @@ html, body {
       &:hover {
         border: 1px solid transparent;
 
+        .iconbar { background: #fff; }
+
         .iconbar:nth-of-type(1) {
           top: 4px;
           transition-delay: 200ms;
           -webkit-transition-delay: 200ms;
           -moz-transition-delay: 200ms;
           transform: rotate(45deg);
-          background: lightgreen;
         }
 
         .iconbar:nth-of-type(2) {
@@ -129,16 +175,16 @@ html, body {
     // Hamburger Styles and animation
     .iconbar:nth-of-type(1) {
       top: -6px;
-      background: violet;
+      background: #6f6f6f;
 
     }.iconbar:nth-of-type(2) {
       top: 1px;
-      background: #2F4763;
+      background: #6f6f6f;
     }
 
     .iconbar:nth-of-type(3) {
       top: 8px;
-      background: violet;
+      background: #6f6f6f;
     }
 
     .iconbar {
@@ -154,7 +200,7 @@ html, body {
 
 @media (max-width: 465px) {
   .navbar_wrapper {
-    background-color: blue;
+    // background-color: blue;
   }
 
   .nav_connect_links {
@@ -191,7 +237,7 @@ footer {
 }
 
 .artist_logo {
-  border: 2px solid red;
+  // border: 2px solid red;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -209,7 +255,7 @@ footer {
 }
 
 .contact_info {
-  border: 2px solid cyan;
+  // border: 2px solid cyan;
   display: flex;
   flex-direction: column;
   align-items: center;
