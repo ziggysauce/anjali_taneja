@@ -19,19 +19,9 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  justify-content: center;
   padding-bottom: 10px; }
-
-.nav_connect_links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-  .nav_connect_links li {
-    list-style-type: none;
-    padding: 0px 20px 0px 10px; }
-  .nav_connect_links i {
-    color: #6f6f6f; }
-    .nav_connect_links i:hover {
-      color: #fff; }
 
 .nav_links ul {
   margin: 0;
@@ -55,7 +45,7 @@ html, body {
     color: #fff;
     border-bottom: 3px solid papayawhip; }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .nav_links li:not(:last-child) {
     display: none; }
   .nav_links li:last-child {
@@ -65,25 +55,24 @@ html, body {
     display: flex;
     flex-direction: column; }
     .nav_links a:hover {
-      border: 1px solid transparent; }
+      border: 0px solid transparent; }
       .nav_links a:hover .iconbar {
         background: #fff; }
       .nav_links a:hover .iconbar:nth-of-type(1) {
         top: 4px;
-        transition-delay: 200ms;
-        -webkit-transition-delay: 200ms;
-        -moz-transition-delay: 200ms;
+        transition-delay: 100ms;
+        -webkit-transition-delay: 100ms;
+        -moz-transition-delay: 100ms;
         transform: rotate(45deg); }
       .nav_links a:hover .iconbar:nth-of-type(2) {
         transform: translateX(100px);
-        transition-delay: 100ms;
         -webkit-transition-delay: 100ms;
         -moz-transition-delay: 100ms; }
       .nav_links a:hover .iconbar:nth-of-type(3) {
         top: 0px;
-        transition-delay: 200ms;
-        -webkit-transition-delay: 200ms;
-        -moz-transition-delay: 200ms;
+        transition-delay: 100ms;
+        -webkit-transition-delay: 100ms;
+        -moz-transition-delay: 100ms;
         transform: rotate(-45deg); }
   .nav_links .iconbar:nth-of-type(1) {
     top: -6px;
@@ -98,24 +87,23 @@ html, body {
     position: relative;
     width: 30px;
     height: 2px;
-    transition: all 800ms ease-in-out;
-    -webkit-transition: all 800ms ease-in-out;
-    -moz-transition: all 800ms ease-in-out; } }
+    transition: all 400ms ease-in-out;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out; } }
 
 @media (max-width: 465px) {
-  .nav_connect_links {
-    display: none; }
-  .nav_contact_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px 10px; } }
+  .active_nav {
+    height: 100%;
+    width: 100%; }
+    .active_nav li:not(:last-of-type) {
+      width: 100% !important; }
+    .active_nav a:hover {
+      border: 1px solid transparent !important; } }
 
 /* ----------------------------------------
 ------------ FOOTER STYLES ----------------
 ---------------------------------------- */
 footer {
-  position: fixed;
   width: 100%;
   bottom: 0;
   background-color: #1f1f1f;

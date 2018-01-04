@@ -1,0 +1,5 @@
+.gallery_section {
+  border: 3px solid purple;
+  height: 100vh;
+  display: flex;
+  flex-direction: row; }

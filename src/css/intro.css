@@ -1,0 +1,5 @@
+.intro_section {
+  border: 3px solid lightblue;
+  height: 100vh;
+  display: flex;
+  flex-direction: row; }

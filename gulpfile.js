@@ -24,8 +24,7 @@ gulp.task('scss', () => {
 // IMPORTANT: if you add more css files or folders, gulp.src needs to be updated as well
 gulp.task('css', ['scss'], () => {
   const stream = gulp.src([ // add more css files here, in the order you want them to be combined
-    'src/css/reset.css',
-    'src/css/styles.css'])
+    'src/css/**/*.css'])
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(concat('styles.css'))
@@ -84,11 +83,11 @@ gulp.task('assets', ['cleanfolder'], () => {
 
 // watches src directory and handles hot-reloading in browser
 // also allows for viewing webiste on multiple devices
-// baseDir can be changed to './dist' if you want to watch the dist directory instead
+// baseDir can be changed to './src' if you want to watch the src directory instead
 gulp.task('browser-sync', () => {
   browserSync({
     server: {
-      baseDir: './src',
+      baseDir: './public',
     },
   });
 });
@@ -96,10 +95,11 @@ gulp.task('browser-sync', () => {
 // watches all src folders for changes to files
 gulp.task('watch', () => {
   gulp.watch('src/js/**/*.js', ['js']);
-  gulp.watch('src/scss/**/*.scss', ['css']);
+  gulp.watch('src/scss/**/*.scss', ['scss']);
+  gulp.watch('src/css/**/*.css', ['css']);
   gulp.watch('src/**/*.html', ['html']);
   gulp.watch('src/assets/**/*', ['assets']);
 });
 
 // default task that runs when you type 'gulp' in command line
-gulp.task('default', ['browser-sync', 'js', 'css', 'html', 'assets', 'watch']);
+gulp.task('default', ['browser-sync', 'js', 'scss', 'css', 'html', 'assets', 'watch']);
