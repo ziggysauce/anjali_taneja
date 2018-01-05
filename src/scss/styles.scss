@@ -104,57 +104,53 @@ html, body {
   @media (max-width: 850px) {
     // background-color: papayawhip;
 
-    li:not(:last-child) {
-      display: none;
-    }
-
-    li:last-child {
-      display: flex;
-    }
+    // li:not(:last-child) {
+    //   display: none;
+    // }
+    //
+    // li:last-child {
+    //   display: flex;
+    // }
 
     // CSS for mobile nav pop-up
-    // .active_nav {
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: flex-start;
-    //   position: fixed;
-    //   height: 100%;
-    //   z-index: 5;
-    //   right: 0;
-    //   top: 0;
-    //   background: rgba(0,0,0,0.9);
-    //
-    //   li:first-of-type {
-    //     margin-top: 10em;
-    //   }
-    //
-    //   li {
-    //     text-align: center;
-    //     width: 350px;
-    //     height: 10%;
-    //   }
-    //
-    //   li:last-of-type {
-    //     display: flex;
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //     width: 50px;
-    //
-    //     a:hover {
-    //       border: 1px solid transparent;
-    //     }
-    //   }
-    //
-    //   a {
-    //     border: 1px solid transparent;
-    //     margin: 0px auto;
-    //   }
-    //
-    //   a:hover {
-    //     border-left: 10px solid papayawhip;
-    //   }
-    // }
+    .active_nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: fixed;
+      height: 100%;
+      z-index: 5;
+      right: 0;
+      top: 0;
+      background: rgba(0,0,0,0.9);
+
+      li:first-of-type {
+        margin-top: 10em;
+      }
+
+      li {
+        text-align: center;
+        width: 350px;
+        height: 10%;
+      }
+
+      li:last-of-type {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+
+        a:hover {
+          border: 1px solid transparent;
+        }
+      }
+
+      a {
+        border: 1px solid transparent;
+        margin: 0px auto;
+      }
+    }
 
     a {
       padding: 25px 0px;

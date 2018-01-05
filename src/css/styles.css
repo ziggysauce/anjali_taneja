@@ -66,10 +66,33 @@ html, body {
       color: #ff3c03;
       border-bottom: 4px solid #ff3c03; }
   @media (max-width: 850px) {
-    .nav_links li:not(:last-child) {
-      display: none; }
-    .nav_links li:last-child {
-      display: flex; }
+    .nav_links .active_nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: fixed;
+      height: 100%;
+      z-index: 5;
+      right: 0;
+      top: 0;
+      background: rgba(0, 0, 0, 0.9); }
+      .nav_links .active_nav li:first-of-type {
+        margin-top: 10em; }
+      .nav_links .active_nav li {
+        text-align: center;
+        width: 350px;
+        height: 10%; }
+      .nav_links .active_nav li:last-of-type {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px; }
+        .nav_links .active_nav li:last-of-type a:hover {
+          border: 1px solid transparent; }
+      .nav_links .active_nav a {
+        border: 1px solid transparent;
+        margin: 0px auto; }
     .nav_links a {
       padding: 25px 0px;
       display: flex;
