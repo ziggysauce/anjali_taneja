@@ -1,5 +1,4 @@
 #intro_section {
-  border: 3px solid lightblue;
-  height: calc(100vh - 5em);
+  height: 100vh;
   display: flex;
   flex-direction: row; }
