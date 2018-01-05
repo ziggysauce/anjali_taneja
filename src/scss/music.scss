@@ -1,6 +1,6 @@
-.music_section {
+#music_section {
   border: 3px solid pink;
-  height: 100vh;
+  height: calc(100vh - 5em);
 
   display: flex;
   flex-direction: row;
@@ -29,7 +29,7 @@
 
   iframe {
     // border: 2px solid yellow;
-    height: 50%;
+    height: 70%;
     width: 100%;
   }
 }
