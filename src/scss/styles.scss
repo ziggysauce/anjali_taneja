@@ -9,7 +9,6 @@ $light_grey: #f5f5f5;
 html, body {
   padding: 0;
   margin: 0;
-  // overflow-x: hidden;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -17,7 +16,6 @@ html, body {
 ------------ NAVBAR STYLES ----------------
 ---------------------------------------- */
 .navbar_wrapper {
-  // border: 1px solid blue;
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -44,7 +42,6 @@ html, body {
 }
 
 .nav_contact_info {
-  // border: 1px solid cyan;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,13 +51,11 @@ html, body {
 }
 
 .nav_links {
-  // border: 1px solid orange;
   padding-right: 50px;
 
   ul {
     margin: 0;
     padding: 0;
-    // padding: 20px;
     height: 100%;
     min-width: 35px;
     list-style-type: none;
@@ -70,7 +65,6 @@ html, body {
     align-items: center;
 
     li {
-      // border: 1px solid red;
       height: 100%;
       flex-direction: column;
       justify-content: center;
@@ -84,7 +78,6 @@ html, body {
   }
 
   a {
-    // border: 1px solid magenta;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,55 +95,54 @@ html, body {
 
   // CSS for tablet nav bar
   @media (max-width: 850px) {
-    // background-color: papayawhip;
 
-    // li:not(:last-child) {
-    //   display: none;
-    // }
-    //
-    // li:last-child {
-    //   display: flex;
-    // }
+    li:not(:last-child) {
+      display: none;
+    }
+
+    li:last-child {
+      display: flex;
+    }
 
     // CSS for mobile nav pop-up
-    .active_nav {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      position: fixed;
-      height: 100%;
-      z-index: 5;
-      right: 0;
-      top: 0;
-      background: rgba(0,0,0,0.9);
-
-      li:first-of-type {
-        margin-top: 10em;
-      }
-
-      li {
-        text-align: center;
-        width: 350px;
-        height: 10%;
-      }
-
-      li:last-of-type {
-        display: flex;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50px;
-
-        a:hover {
-          border: 1px solid transparent;
-        }
-      }
-
-      a {
-        border: 1px solid transparent;
-        margin: 0px auto;
-      }
-    }
+    // .active_nav {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: flex-start;
+    //   position: fixed;
+    //   height: 100%;
+    //   z-index: 5;
+    //   right: 0;
+    //   top: 0;
+    //   background: rgba(0,0,0,0.9);
+    //
+    //   li:first-of-type {
+    //     margin-top: 10em;
+    //   }
+    //
+    //   li {
+    //     text-align: center;
+    //     width: 350px;
+    //     height: 10%;
+    //   }
+    //
+    //   li:last-of-type {
+    //     display: flex;
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     width: 50px;
+    //
+    //     a:hover {
+    //       border: 1px solid transparent;
+    //     }
+    //   }
+    //
+    //   a {
+    //     border: 1px solid transparent;
+    //     margin: 0px auto;
+    //   }
+    // }
 
     a {
       padding: 25px 0px;
@@ -214,7 +206,6 @@ html, body {
 
 @media (max-width: 465px) {
   .navbar_wrapper {
-    // background-color: blue;
   }
 
   .active_nav {
@@ -223,13 +214,10 @@ html, body {
     width: 100%;
 
     li:not(:last-of-type) {
-      // border: 1px solid yellow;
       width: 100% !important;
     }
 
     a {
-      // color: orange;
-
       &:hover {
         border: 1px solid transparent !important;
       }
@@ -241,7 +229,6 @@ html, body {
 ------------ FOOTER STYLES ----------------
 ---------------------------------------- */
 footer {
-  // position: fixed;
   width: 100%;
   bottom: 0;
   background-color: $dark_grey;
@@ -259,7 +246,6 @@ footer {
 }
 
 .artist_logo {
-  // border: 2px solid red;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -277,7 +263,6 @@ footer {
 }
 
 .contact_info {
-  // border: 2px solid cyan;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -288,10 +273,12 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 
   li {
     list-style-type: none;
-    padding: 0px 20px 0px 10px;
+    padding: 0px 20px 20px 10px;
   }
 
   i {
@@ -299,7 +286,7 @@ footer {
     font-size: 1.5em;
 
     &:hover {
-      color: #fff;
+      color: $coral;
     }
   }
 }

@@ -5,14 +5,11 @@ $medium_grey: #6f6f6f;
 $light_grey: #f5f5f5;
 
 #video_section {
-  // border: 3px solid orange;
-  // height: calc(100vh - 5em);
   background: linear-gradient(to bottom left, $coral, #ff8e6d);
   color: $light_grey;
 }
 
 .video_content {
-  // border: 1px solid blue;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -31,7 +28,6 @@ $light_grey: #f5f5f5;
 }
 
 .video_description {
-  // border: 2px solid yellow;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,6 +76,7 @@ $light_grey: #f5f5f5;
     min-width: 90%;
     min-height: 50vw;
     margin: 0 !important;
+    margin-top: 5% !important;
   }
 
   .video_description {

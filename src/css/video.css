@@ -51,7 +51,8 @@
   iframe {
     min-width: 90%;
     min-height: 50vw;
-    margin: 0 !important; }
+    margin: 0 !important;
+    margin-top: 5% !important; }
   .video_description {
     width: 100%; }
     .video_description p {
