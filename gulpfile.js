@@ -22,7 +22,7 @@ gulp.task('scss', () => {
 
 // concatenates and minifies css files.
 // IMPORTANT: if you add more css files or folders, gulp.src needs to be updated as well
-gulp.task('css', ['scss'], () => {
+gulp.task('css', () => {
   const stream = gulp.src([ // add more css files here, in the order you want them to be combined
     'src/css/**/*.css'])
     .pipe(plumber())
