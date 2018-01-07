@@ -1,5 +1,5 @@
 // Color Variables
-$accent: #ff3c03;
+$accent: #061700;
 $dark_grey: #1f1f1f;
 $medium_grey: #6f6f6f;
 $light_grey: #f5f5f5;
@@ -7,14 +7,14 @@ $light_grey: #f5f5f5;
 #calendar_section {
   height: calc(100vh - 5em);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
-  background: linear-gradient(to bottom left, $accent, #ff8e6d);
+  background: linear-gradient(to bottom left, $accent, #708869);
   color: $light_grey;
 }
 
 .calendar_content {
-  border: 2px solid $dark_grey;
+  border: 2px solid $light_grey;
 
   display: flex;
   flex-direction: column;
@@ -25,5 +25,10 @@ $light_grey: #f5f5f5;
   width: 80%;
   height: 80%;
 
-  color: $dark_grey;
+  color: $light_grey;
+}
+
+.event_list {
+  display: flex;
+  flex-direction: row;
 }
