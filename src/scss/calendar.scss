@@ -29,6 +29,8 @@ $light_grey: #f5f5f5;
 }
 
 .event_list {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
