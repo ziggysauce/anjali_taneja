@@ -2,7 +2,7 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
-  background: #f5f5f5; }
+  background: #4d2a19; }
 
 .intro_content {
   content: ' ';
@@ -11,7 +11,7 @@
   height: 100%;
   z-index: 1;
   opacity: 0.7;
-  background-image: url("../assets/img/intro_pic2.jpg");
+  background-image: url("../assets/img/banner_1.jpg");
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -52,9 +52,12 @@
 
 .about_content {
   width: 80%;
+  max-width: 700px;
   margin: 0px auto;
   padding: 20px;
   color: #6f6f6f; }
+  .about_content h2 {
+    text-align: center; }
 
 @media (max-width: 850px) {
   .intro_description_wrapper {

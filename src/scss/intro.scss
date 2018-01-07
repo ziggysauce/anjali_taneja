@@ -8,7 +8,7 @@ $light_grey: #f5f5f5;
   height: 100vh;
   display: flex;
   flex-direction: row;
-  background: #f5f5f5;
+  background: #4d2a19;
 }
 
 .intro_content {
@@ -16,11 +16,12 @@ $light_grey: #f5f5f5;
   position: absolute;
   width: 100%;
   height: 100%;
+  // left: 35%;
   z-index: 1;
   opacity: 0.7;
 
   // background-image: url('../assets/img/intro_pic2.jpg');
-  background-image: url('../assets/img/intro_pic2.jpg');
+  background-image: url('../assets/img/banner_1.jpg');
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -79,9 +80,14 @@ $light_grey: #f5f5f5;
 
 .about_content {
   width: 80%;
+  max-width: 700px;
   margin: 0px auto;
   padding: 20px;
   color: $medium_grey;
+
+  h2 {
+    text-align: center;
+  }
 }
 
 // CSS for tablet intro section
