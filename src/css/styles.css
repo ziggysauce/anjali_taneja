@@ -14,8 +14,9 @@ html, body {
   height: 5em;
   width: 100%;
   z-index: 5;
-  background-color: #f5f5f5;
+  background: transparent;
   color: #ff3c03;
+  color: white;
   transition: ease-in-out 300ms;
   -webkit-transition: ease-in-out 300ms;
   -moz-transition: ease-in-out 300ms; }
@@ -58,10 +59,11 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #6f6f6f;
+    color: white;
     text-decoration: none;
     height: 95%;
-    padding: 0px 20px; }
+    padding: 0px 20px;
+    text-transform: lowercase; }
     .nav_links a:hover {
       color: #ff3c03;
       border-bottom: 4px solid #ff3c03; }

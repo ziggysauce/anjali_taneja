@@ -6,8 +6,8 @@
 
 .music_bg {
   height: 100%;
-  width: 780px;
-  background-image: url("../assets/img/intro_pic.jpg");
+  width: 100%;
+  background-image: url("../assets/img/music_1.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed; }
