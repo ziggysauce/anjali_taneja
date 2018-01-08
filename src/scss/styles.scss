@@ -67,7 +67,7 @@ html, body {
     align-items: center;
 
     li {
-      height: 100%;
+    //   height: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -88,17 +88,20 @@ html, body {
     color: white;
     text-decoration: none;
     height: 95%;
-    padding: 0px 20px;
+    padding: 0;
+    margin: 0px 20px;
     text-transform: lowercase;
 
     &:hover {
-      color: $accent;
-      border-bottom: 4px solid $accent;
+    //   text-decoration: underline;
+      padding-bottom: 3px;
+    //   color: $accent;
+      border-bottom: 2px solid white;
     }
   }
 
   // CSS for tablet nav bar
-  @media (max-width: 850px) {
+  @media (max-width: 900px) {
 
     li:not(:last-child) {
       display: none;

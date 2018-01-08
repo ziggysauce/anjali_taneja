@@ -48,7 +48,6 @@ html, body {
     justify-content: space-between;
     align-items: center; }
     .nav_links ul li {
-      height: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
@@ -62,12 +61,13 @@ html, body {
     color: white;
     text-decoration: none;
     height: 95%;
-    padding: 0px 20px;
+    padding: 0;
+    margin: 0px 20px;
     text-transform: lowercase; }
     .nav_links a:hover {
-      color: #ff3c03;
-      border-bottom: 4px solid #ff3c03; }
-  @media (max-width: 850px) {
+      padding-bottom: 3px;
+      border-bottom: 2px solid white; }
+  @media (max-width: 900px) {
     .nav_links li:not(:last-child) {
       display: none; }
     .nav_links li:last-child {

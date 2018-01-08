@@ -27,6 +27,10 @@
     height: 70%;
     width: 80%; }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .music_bg {
     display: none; } }
+
+@media (max-width: 465px) {
+  .music_content iframe {
+    height: 90%; } }
