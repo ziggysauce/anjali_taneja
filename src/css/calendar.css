@@ -1,0 +1,36 @@
+#calendar_section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom left, #485043, #515350);
+  color: #f5f5f5; }
+
+.calendar_bg {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.2;
+  background-image: url("../assets/img/bushes.jpeg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-repeat: no-repeat; }
+
+.calendar_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin: 5% auto;
+  width: 80%;
+  height: 80%;
+  color: #f5f5f5; }
+
+.event_list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }

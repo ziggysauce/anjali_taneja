@@ -1,1 +1,299 @@
 // Main styling sheet for webpage
+
+// Color Variables
+$accent: #ff3c03;
+$dark_grey: #1f1f1f;
+$medium_grey: #6f6f6f;
+$light_grey: #f5f5f5;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* ----------------------------------------
+------------ NAVBAR STYLES ----------------
+---------------------------------------- */
+.navbar_wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5em;
+  width: 100%;
+  z-index: 5;
+
+  // background-color: $light_grey;
+  background: transparent;
+  color: $accent;
+  color: white;
+
+  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 300ms;
+  -moz-transition: ease-in-out 300ms;
+}
+
+// Hide nav bar when user scrolls down
+// Show nav bar when user scrolls up
+.nav_up {
+  transform: translateY(-5em);
+  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 300ms;
+  -moz-transition: ease-in-out 300ms;
+}
+
+.nav_contact_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 0px 10px 10px 50px;
+}
+
+.nav_links {
+  padding-right: 50px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-width: 35px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+    //   height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  // Hide mobile nav button
+  li:last-child {
+    display: none;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // color: $medium_grey;
+    color: white;
+    text-decoration: none;
+    height: 95%;
+    padding: 0;
+    margin: 0px 20px;
+    text-transform: lowercase;
+
+    &:hover {
+    //   text-decoration: underline;
+      padding-bottom: 3px;
+    //   color: $accent;
+      border-bottom: 2px solid white;
+    }
+  }
+
+  // CSS for tablet nav bar
+  @media (max-width: 900px) {
+
+    li:not(:last-child) {
+      display: none;
+    }
+
+    li:last-child {
+      display: flex;
+    }
+
+    // CSS for mobile nav pop-up
+    // .active_nav {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: flex-start;
+    //   position: fixed;
+    //   height: 100%;
+    //   z-index: 5;
+    //   right: 0;
+    //   top: 0;
+    //   background: rgba(0,0,0,0.9);
+    //
+    //   li:first-of-type {
+    //     margin-top: 10em;
+    //   }
+    //
+    //   li {
+    //     text-align: center;
+    //     width: 350px;
+    //     height: 10%;
+    //   }
+    //
+    //   li:last-of-type {
+    //     display: flex;
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     width: 50px;
+    //
+    //     a:hover {
+    //       border: 1px solid transparent;
+    //     }
+    //   }
+    //
+    //   a {
+    //     border: 1px solid transparent;
+    //     margin: 0px auto;
+    //   }
+    // }
+
+    a {
+      padding: 25px 0px;
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        border: 0px solid transparent;
+
+        .iconbar { background: #fff; }
+
+        .iconbar:nth-of-type(1) {
+          top: 4px;
+          transition-delay: 100ms;
+          -webkit-transition-delay: 100ms;
+          -moz-transition-delay: 100ms;
+          transform: rotate(45deg);
+        }
+
+        .iconbar:nth-of-type(2) {
+          transform: translateX(100px);
+          -webkit-transition-delay: 100ms;
+          -moz-transition-delay: 100ms;
+        }
+
+        .iconbar:nth-of-type(3) {
+          top: 0px;
+          transition-delay: 100ms;
+          -webkit-transition-delay: 100ms;
+          -moz-transition-delay: 100ms;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    // Hamburger Styles and animation
+    .iconbar:nth-of-type(1) {
+      top: -6px;
+      background: $medium_grey;
+
+    }.iconbar:nth-of-type(2) {
+      top: 1px;
+      background: $medium_grey;
+    }
+
+    .iconbar:nth-of-type(3) {
+      top: 8px;
+      background: $medium_grey;
+    }
+
+    .iconbar {
+      position: relative;
+      width: 30px;
+      height: 2px;
+      transition: all 400ms ease-in-out;
+      -webkit-transition: all 400ms ease-in-out;
+      -moz-transition: all 400ms ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 465px) {
+  .navbar_wrapper {
+  }
+
+  .active_nav {
+    // make no scroll later
+    height: 100%;
+    width: 100%;
+
+    li:not(:last-of-type) {
+      width: 100% !important;
+    }
+
+    a {
+      &:hover {
+        border: 1px solid transparent !important;
+      }
+    }
+  }
+}
+
+/* ----------------------------------------
+------------ FOOTER STYLES ----------------
+---------------------------------------- */
+footer {
+  width: 100%;
+  bottom: 0;
+  background-color: $dark_grey;
+  color: $medium_grey;
+}
+
+.footer_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 0px;
+}
+
+.artist_logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding: 15px;
+
+  a {
+    text-decoration: none;
+    color: $medium_grey;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.contact_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.connect_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+    padding: 0px 20px 20px 10px;
+  }
+
+  i {
+    color: $medium_grey;
+    font-size: 1.5em;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
