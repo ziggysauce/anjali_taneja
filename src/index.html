@@ -49,9 +49,8 @@
     </section>
 
     <section id="intro_section"> <!-- INTRO -->
-      <div class="intro_content">
-
-      </div>
+      <div class="intro_content"></div>
+      <div class="intro_bg_overlay"></div>
       <div class="intro_description_wrapper">
         <h1>anjali taneja</h1>
         <ul class="intro_social_media">
@@ -101,24 +100,24 @@
       <div class="calendar_content">
         <h2>Upcoming Events</h2>
         <div class="event_list">
-          <p>Date</p>
-          <p>Event Name</p>
-          <p>Location and Time</p>
+          <p>February 10</p>
+          <p>Gypsy Sally's (Washington, D.C.)</p>
+          <p>9:00 pm</p>
         </div>
         <div class="event_list">
-          <p>Date</p>
-          <p>Event Name</p>
-          <p>Location and Time</p>
+          <p>March 24</p>
+          <p>Blues Alley Club (Washington, D.C.)</p>
+          <p>7:00 pm</p>
         </div>
         <div class="event_list">
-          <p>Date</p>
-          <p>Event Name</p>
-          <p>Location and Time</p>
+          <p>April 02</p>
+          <p>Baltimore Soundstage (Baltimore, MD)</p>
+          <p>7:30 pm</p>
         </div>
         <div class="event_list">
-          <p>Date</p>
-          <p>Event Name</p>
-          <p>Location and Time</p>
+          <p>May 18</p>
+          <p>The Fillmore (Silver Spring, MD)</p>
+          <p>8:00 pm</p>
         </div>
       </div>
     </section> <!-- CALENDAR -->
@@ -134,7 +133,14 @@
 
     <section id="contact_section"> <!-- CONTACT -->
       <div class="contact_content">
-        <p>Insert contact stuff here</p>
+        <h2>Inquiries</h2>
+        <form class="contact_form" action="index.html" method="post">
+          <input type="text" name="name" placeholder="name" required>
+          <input type="text" name="email_address" placeholder="email address" required>
+          <input type="text" name="subject" placeholder="subject" required>
+          <textarea name="message" placeholder="message..." required></textarea>
+          <button type="submit" name="submit_message">submit</button>
+        </form>
       </div>
     </section> <!-- CONTACT -->
 

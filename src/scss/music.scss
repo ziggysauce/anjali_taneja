@@ -5,8 +5,7 @@ $medium_grey: #6f6f6f;
 $light_grey: #f5f5f5;
 
 #music_section {
-  height: calc(100vh - 5em);
-  // height: 100vh;
+  height: calc(100vh - 3em);
   display: flex;
   flex-direction: row;
   background: $light_grey;
