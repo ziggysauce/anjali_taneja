@@ -72,7 +72,10 @@
     -moz-background-size: cover;
     background-position: center;
     -webkit-background-position: center;
-    -moz-background-position: center; }
+    -moz-background-position: center;
+    background-attachment: scroll;
+    -webkit-background-attachment: scroll;
+    -moz-background-attachment: scroll; }
   .intro_bg_overlay {
     visibility: hidden; }
   .intro_description_wrapper {

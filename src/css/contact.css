@@ -28,6 +28,7 @@
     margin: 10px;
     background: transparent;
     border: none;
+    border-radius: 0px;
     border-bottom: 2px solid #6f6f6f;
     outline: none;
     transition: 0.3s;
@@ -47,6 +48,7 @@
     margin: 10px;
     background: transparent;
     border: none;
+    border-radius: 0px;
     border-bottom: 2px solid #6f6f6f;
     outline: none; }
   .contact_content button {

@@ -104,9 +104,14 @@ $light_grey: #f5f5f5;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
+
     background-position: center;
     -webkit-background-position: center;
     -moz-background-position: center;
+
+    background-attachment: scroll;
+    -webkit-background-attachment: scroll;
+    -moz-background-attachment: scroll;
   }
 
   .intro_bg_overlay {
@@ -120,13 +125,12 @@ $light_grey: #f5f5f5;
     z-index: 2;
 
     background: linear-gradient(to top, rgba(0,0,0, 0.8), rgba(0,0,0,0));
-
-
     justify-content: flex-end;
     align-items: center;
   }
 }
 
+// CSS for mobile intro section
 @media (max-width: 465px) {
   .intro_social_media {
     font-size: 0.5em;
