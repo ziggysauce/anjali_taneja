@@ -17,7 +17,8 @@ gulp.task('scss', () => {
   gulp.src('src/scss/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest('src/css/'));
+    .pipe(gulp.dest('src/css/'))
+    .pipe(reload({ stream: true }));
 });
 
 // concatenates and minifies css files.
@@ -41,6 +42,8 @@ gulp.task('css', () => {
 // IMPORTANT: if you add more js files or folders, gulp.src needs to be updated as well
 gulp.task('js', () => {
   gulp.src([ // add more js files here, in the order you want them to be combined
+    'src/js/init.js',
+    'src/js/components/smoothscroll.js',
     'src/js/main.js',
   ])
     .pipe(plumber())
@@ -87,7 +90,7 @@ gulp.task('assets', ['cleanfolder'], () => {
 gulp.task('browser-sync', () => {
   browserSync({
     server: {
-      baseDir: './public',
+      baseDir: './src',
     },
   });
 });

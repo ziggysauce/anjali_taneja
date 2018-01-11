@@ -15,11 +15,12 @@
   "license": "ISC",
   "homepage": "https://github.com/ziggysauce/anjali_taneja#readme",
   "devDependencies": {
+    "ajv": "5.0.0",
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
-    "eslint": "^4.7.2",
-    "eslint-config-airbnb-base": "^12.0.1",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
     "gulp": "^3.9.1",
     "gulp-babel-minify": "^0.2.0",
     "gulp-concat": "^2.6.1",
@@ -27,7 +28,6 @@
     "gulp-html-replace": "^1.6.2",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
-    "ajv": "5.0.0"
+    "gulp-sourcemaps": "^2.6.1"
   }
 }

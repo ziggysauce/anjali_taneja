@@ -1,49 +1,41 @@
 // Main JS File for webpage
 
-// Initial function to house all JS functions
-(function init() {
-  window.app = {
-    // created functions are sent here
-  }
-}());
-
-
-/* =================================
-============== MODEL ===============
-================================= */
-
-// JS code here handles all AJAX requests
-
-/* =================================
-============== VIEW ================
-================================= */
-
-// JS code here handles DOM elements
-
-(function testView() {
-  const anjaliNavLogo = document.getElementById('nav_logo');
-
-  function testView() {
-    anjaliNavLogo.textContent = 'testing JS code here';
-  }
-
-  window.app.testview = {
-    testView,
-  }
-}());
-
 /* =================================
 ============ CONTROLLER ============
 ================================= */
 
-// JS code here controls previous functions
+// JS code here controls previous functions (application logic)
 
 // Run all functions from controller section
-(function runAll() {
+(function makeController() {
   // Save const short names for each model and view component
   const {
-    testview,
+    smoothScrollView,
   } = window.app;
+
+  /* ================================================================
+  ======================= Smooth Scroll =============================
+  ================================================================ */
+  function smoothScrollController() {
+    // Define smooth scroll links
+    const scrollToggle = document.querySelectorAll('.smooth_scroll');
+    // For each smooth scroll link
+    [].forEach.call(scrollToggle, (toggle) => {
+      // When the smooth scroll link is clicked
+      toggle.addEventListener('click', (e) => {
+        // Prevent the default link behavior
+        e.preventDefault();
+        // Get anchor link and calculate distance from the top
+        const link = toggle.getAttribute('href');
+        const linkId = document.querySelector(link);
+        // If the anchor exists
+        if (linkId) {
+          // Scroll to the anchor at 500ms speed
+          smoothScrollView.smoothScroll(linkId, 500);
+        }
+      }, false);
+    });
+  }
 
   // Handles all event listeners
   function eventHandlers() {
@@ -51,8 +43,8 @@
   }
 
   function runAll() {
-    // List all functions here
-    testview.testView();
+    // List all controller functions here
+    smoothScrollController();
     eventHandlers();
   }
 
