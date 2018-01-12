@@ -16,10 +16,13 @@
     <link rel="stylesheet" href="css/video.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/styles.css">
     <!-- endbuild -->
 
     <!-- build:js -->
+    <script src="js/init.js" defer></script>
+    <script src="js/components/smoothscroll.js" defer></script>
     <script src="js/main.js" defer></script>
     <!-- endbuild -->
   </head>
@@ -28,16 +31,16 @@
     <section> <!-- NAVIGATION BAR -->
       <div class="navbar_wrapper">
         <div class="nav_contact_info">
-          <span>ANJALI TANEJA</span>
+          <span id="nav_logo">ANJALI TANEJA</span>
         </div>
         <div class="nav_links">
           <ul class="active_nav">
-            <li><a href="#about_section">ABOUT</a></li>
-            <li><a href="#music_section">MUSIC</a></li>
-            <li><a href="#video_section">VIDEO</a></li>
-            <li><a href="#gallery_section">PHOTOS</a></li>
-            <li><a href="#calendar_section">SCHEDULE</a></li>
-            <li><a href="#contact_section">CONTACT</a></li>
+            <li><a class="smooth_scroll" href="#about_section">ABOUT</a></li>
+            <li><a class="smooth_scroll" href="#video_section">VIDEO</a></li>
+            <li><a class="smooth_scroll" href="#music_section">MUSIC</a></li>
+            <li><a class="smooth_scroll" href="#gallery_section">PHOTOS</a></li>
+            <li><a class="smooth_scroll" href="#calendar_section">SCHEDULE</a></li>
+            <li><a class="smooth_scroll" href="#contact_section">CONTACT</a></li>
             <li><a href="javascript:void(0)">
               <span class="iconbar"></span>
               <span class="iconbar"></span>
@@ -49,11 +52,10 @@
     </section>
 
     <section id="intro_section"> <!-- INTRO -->
-      <div class="intro_content">
-
-      </div>
+      <div class="intro_content"></div>
+      <div class="intro_bg_overlay"></div>
       <div class="intro_description_wrapper">
-        <h1>Anjali Taneja</h1>
+        <h1>anjali taneja</h1>
         <ul class="intro_social_media">
           <li><a href="mailto:anjalitaneja94@gmail.com"><i class="fa fa-envelope"></i></a></li>
           <li><a href="https://www.facebook.com/anjalixmusic" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -73,6 +75,9 @@
     </section> <!-- ABOUT -->
 
     <section id="video_section"> <!-- VIDEO -->
+      <div class="video_bg">
+
+      </div>
       <div class="video_content">
         <iframe src="https://www.youtube.com/embed/fCnCZvr2S7s" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
@@ -93,27 +98,30 @@
     </section> <!-- MUSIC -->
 
     <section id="calendar_section"> <!-- CALENDAR -->
+      <div class="calendar_bg">
+
+      </div>
       <div class="calendar_content">
         <h2>Upcoming Events</h2>
         <div class="event_list">
-          <p>Date</p>
-          <p>Event Name</p>
-          <p>Location and Time</p>
+          <p>February 10</p>
+          <p>Gypsy Sally's (Washington, D.C.)</p>
+          <p>9:00 pm</p>
         </div>
         <div class="event_list">
-          <p>Date</p>
-          <p>Event Name</p>
-          <p>Location and Time</p>
+          <p>March 24</p>
+          <p>Blues Alley Club (Washington, D.C.)</p>
+          <p>7:00 pm</p>
         </div>
         <div class="event_list">
-          <p>Date</p>
-          <p>Event Name</p>
-          <p>Location and Time</p>
+          <p>April 02</p>
+          <p>Baltimore Soundstage (Baltimore, MD)</p>
+          <p>7:30 pm</p>
         </div>
         <div class="event_list">
-          <p>Date</p>
-          <p>Event Name</p>
-          <p>Location and Time</p>
+          <p>May 18</p>
+          <p>The Fillmore (Silver Spring, MD)</p>
+          <p>8:00 pm</p>
         </div>
       </div>
     </section> <!-- CALENDAR -->
@@ -129,7 +137,14 @@
 
     <section id="contact_section"> <!-- CONTACT -->
       <div class="contact_content">
-        <p>Insert contact stuff here</p>
+        <h2>Inquiries</h2>
+        <form class="contact_form" action="index.html" method="post">
+          <input type="text" name="name" placeholder="name" required>
+          <input type="text" name="email_address" placeholder="email address" required>
+          <input type="text" name="subject" placeholder="subject" required>
+          <textarea name="message" placeholder="message..." required></textarea>
+          <button type="submit" name="submit_message">submit</button>
+        </form>
       </div>
     </section> <!-- CONTACT -->
 

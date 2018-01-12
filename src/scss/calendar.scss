@@ -1,36 +1,77 @@
 // Color Variables
-$accent: #281009;
+$accent: #061700;
 $dark_grey: #1f1f1f;
 $medium_grey: #6f6f6f;
 $light_grey: #f5f5f5;
 
 #calendar_section {
-  height: calc(100vh - 5em);
+  height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
-  background: linear-gradient(to bottom left, $accent, #5C220E);
+  // background: linear-gradient(to bottom left, $accent, #708869);
+  background: linear-gradient(to bottom left, #485043, #515350);
   color: $light_grey;
 }
 
+.calendar_bg {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.5;
+
+  background-image: url('../assets/img/orangeflower.jpeg');
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .calendar_content {
-  border: 2px solid $light_grey;
+  // border: 2px solid $light_grey;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 
   margin: 5% auto;
-  width: 80%;
+  width: 100%;
   height: 80%;
 
+  font-size: 1.5em;
+  text-transform: lowercase;
   color: $light_grey;
+
+  h2 {
+    margin-bottom: 10%;
+    font-size: 3em;
+  }
 }
 
 .event_list {
   width: 100%;
+  // max-width: 600px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  text-align: left;
+
+  p {
+    width: 33%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .calendar_content {
+    font-size: 1em;
+
+    h2 {
+      font-size: 2em;
+    }
+  }
 }
