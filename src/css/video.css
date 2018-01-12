@@ -24,7 +24,8 @@
   width: 30%;
   margin: 10px;
   padding: 10px;
-  text-transform: lowercase; }
+  text-transform: lowercase;
+  line-height: 150%; }
   .video_description h2 {
     text-transform: lowercase; }
   .video_description a {
