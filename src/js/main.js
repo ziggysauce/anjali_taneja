@@ -44,7 +44,7 @@
   function responsiveNavBarController() {
     document.querySelector('#nav_link_list').addEventListener('click', (e) => {
       e.preventDefault();
-      navbarView.showResponsiveNavBar(e);
+      navbarView.showResponsiveNavBar();
     });
   }
 

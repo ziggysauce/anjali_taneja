@@ -110,6 +110,11 @@ html, body {
 
     li:last-child {
       display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
     }
 
     // CSS for mobile nav pop-up
@@ -122,13 +127,31 @@ html, body {
       z-index: 5;
       right: 0;
       top: 0;
-      background: rgba(255,255,255,0.9);
+      background: rgba(0,0,0,0.9);
+
+      animation: fadein 1s;
+      -moz-animation: fadein 1s;
+      -webkit-animation: fadein 1s;
+
+      @keyframes fadein {
+          from { opacity:0; }
+          to { opacity:1; }
+      }
+      @-moz-keyframes fadein {
+        from { opacity:0; }
+        to { opacity:1; }
+      }
+      @-webkit-keyframes fadein {
+        from { opacity:0; }
+        to { opacity:1; }
+      }
 
       li:first-of-type {
         margin-top: 10em;
       }
 
       li {
+        box-sizing: border-box;
         display: flex;
         text-align: center;
         width: 350px;
@@ -144,59 +167,56 @@ html, body {
         height: 50px;
       }
 
-      a:hover {
-        color: $accent;
+      .iconbar { background: $medium_grey; }
+
+      .iconbar:nth-of-type(1) {
+        top: 4px;
+        transition-delay: 100ms;
+        -webkit-transition-delay: 100ms;
+        -moz-transition-delay: 100ms;
+        transform: rotate(45deg);
       }
 
+      .iconbar:nth-of-type(2) {
+        transform: translateX(100px);
+        -webkit-transition-delay: 100ms;
+        -moz-transition-delay: 100ms;
+      }
+
+      .iconbar:nth-of-type(3) {
+        top: 0px;
+        transition-delay: 100ms;
+        -webkit-transition-delay: 100ms;
+        -moz-transition-delay: 100ms;
+        transform: rotate(-45deg);
+      }
     }
 
     a {
       // padding: 25px 0px;
       display: flex;
       flex-direction: column;
+      color: $medium_grey;
 
       &:hover {
+        color: $accent;
         border: 0px solid transparent;
 
         .iconbar { background: $accent; }
-
-        .iconbar:nth-of-type(1) {
-          top: 4px;
-          transition-delay: 100ms;
-          -webkit-transition-delay: 100ms;
-          -moz-transition-delay: 100ms;
-          transform: rotate(45deg);
-        }
-
-        .iconbar:nth-of-type(2) {
-          transform: translateX(100px);
-          -webkit-transition-delay: 100ms;
-          -moz-transition-delay: 100ms;
-        }
-
-        .iconbar:nth-of-type(3) {
-          top: 0px;
-          transition-delay: 100ms;
-          -webkit-transition-delay: 100ms;
-          -moz-transition-delay: 100ms;
-          transform: rotate(-45deg);
-        }
       }
     }
 
     // Hamburger Styles and animation
     .iconbar:nth-of-type(1) {
       top: -6px;
-      background: $dark_grey;
+    }
 
-    }.iconbar:nth-of-type(2) {
+    .iconbar:nth-of-type(2) {
       top: 1px;
-      background: $dark_grey;
     }
 
     .iconbar:nth-of-type(3) {
       top: 8px;
-      background: $dark_grey;
     }
 
     .iconbar {
@@ -206,6 +226,7 @@ html, body {
       transition: all 300ms ease-in-out;
       -webkit-transition: all 300ms ease-in-out;
       -moz-transition: all 300ms ease-in-out;
+      background: $dark_grey;
     }
   }
 }

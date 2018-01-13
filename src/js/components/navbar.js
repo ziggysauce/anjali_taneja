@@ -11,7 +11,7 @@
 // JS code here handles DOM elements (presentation)
 
 (function makeResponsiveNavBarView() {
-  function showResponsiveNavBar(e) {
+  function showResponsiveNavBar() {
     const navToggle = document.querySelector('#nav_link_list');
 
     // Check if navbar is active
