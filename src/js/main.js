@@ -11,6 +11,7 @@
   // Save const short names for each model and view component
   const {
     smoothScrollView,
+    navbarView,
   } = window.app;
 
   /* ================================================================
@@ -37,6 +38,16 @@
     });
   }
 
+  /* ================================================================
+  ================= Responsive Navigation Bar =======================
+  ================================================================ */
+  function responsiveNavBarController() {
+    document.querySelector('#nav_link_list').addEventListener('click', (e) => {
+      e.preventDefault();
+      navbarView.showResponsiveNavBar(e);
+    });
+  }
+
   // Handles all event listeners
   function eventHandlers() {
     // add code here
@@ -45,6 +56,7 @@
   function runAll() {
     // List all controller functions here
     smoothScrollController();
+    responsiveNavBarController();
     eventHandlers();
   }
 

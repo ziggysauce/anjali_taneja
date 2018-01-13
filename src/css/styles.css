@@ -65,20 +65,46 @@ html, body {
     margin: 0px 20px;
     text-transform: lowercase; }
     .nav_links a:hover {
-      color: #EF994C;
-      border-bottom: 2px solid #EF994C; }
+      color: #7E3A3A;
+      border-bottom: 2px solid #7E3A3A; }
   @media (max-width: 900px) {
     .nav_links li:not(:last-child) {
       display: none; }
     .nav_links li:last-child {
       display: flex; }
+    .nav_links .active_nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: fixed;
+      height: 100%;
+      z-index: 5;
+      right: 0;
+      top: 0;
+      background: rgba(255, 255, 255, 0.9); }
+      .nav_links .active_nav li:first-of-type {
+        margin-top: 10em; }
+      .nav_links .active_nav li {
+        display: flex;
+        text-align: center;
+        width: 350px;
+        height: 10%; }
+      .nav_links .active_nav li:last-of-type {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px; }
+      .nav_links .active_nav a:hover {
+        color: #7E3A3A; }
     .nav_links a {
       display: flex;
       flex-direction: column; }
       .nav_links a:hover {
         border: 0px solid transparent; }
         .nav_links a:hover .iconbar {
-          background: #EF994C; }
+          background: #7E3A3A; }
         .nav_links a:hover .iconbar:nth-of-type(1) {
           top: 4px;
           transition-delay: 100ms;
@@ -108,9 +134,9 @@ html, body {
       position: relative;
       width: 30px;
       height: 2px;
-      transition: all 400ms ease-in-out;
-      -webkit-transition: all 400ms ease-in-out;
-      -moz-transition: all 400ms ease-in-out; } }
+      transition: all 300ms ease-in-out;
+      -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out; } }
 
 @media (max-width: 465px) {
   .active_nav {
@@ -166,4 +192,4 @@ footer {
     color: #6f6f6f;
     font-size: 1.5em; }
     .connect_links i:hover {
-      color: #EF994C; }
+      color: #7E3A3A; }
