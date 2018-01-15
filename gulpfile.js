@@ -43,6 +43,7 @@ gulp.task('css', () => {
 gulp.task('js', () => {
   gulp.src([ // add more js files here, in the order you want them to be combined
     'src/js/init.js',
+    'src/js/components/navbar.js',
     'src/js/components/smoothscroll.js',
     'src/js/main.js',
   ])

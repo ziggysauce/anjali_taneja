@@ -42,7 +42,7 @@
   ================= Responsive Navigation Bar =======================
   ================================================================ */
   function responsiveNavBarController() {
-    document.querySelector('#nav_link_list').addEventListener('click', (e) => {
+    document.querySelector('.hamburger_nav_button').addEventListener('click', (e) => {
       e.preventDefault();
       navbarView.showResponsiveNavBar();
     });
