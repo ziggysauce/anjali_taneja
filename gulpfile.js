@@ -91,7 +91,7 @@ gulp.task('assets', ['cleanfolder'], () => {
 gulp.task('browser-sync', () => {
   browserSync({
     server: {
-      baseDir: './src',
+      baseDir: './public',
     },
   });
 });

@@ -77,42 +77,9 @@ html, body {
       position: fixed;
       height: 100%;
       z-index: 5;
-      right: 0;
+      right: -300px;
       top: 0;
-      background: rgba(0, 0, 0, 0.9);
-      animation: fadein 1s;
-      -moz-animation: fadein 1s;
-      -webkit-animation: fadein 1s; }
-    @keyframes fadein {
-      from {
-        opacity: 0; }
-      to {
-        opacity: 1; } }
-    @-moz-keyframes fadein {
-      from {
-        opacity: 0; }
-      to {
-        opacity: 1; } }
-    @-webkit-keyframes fadein {
-      from {
-        opacity: 0; }
-      to {
-        opacity: 1; } }
-    @keyframes fadeout {
-      from {
-        opacity: 1; }
-      to {
-        opacity: 0; } }
-    @-moz-keyframes fadeout {
-      from {
-        opacity: 1; }
-      to {
-        opacity: 0; } }
-    @-webkit-keyframes fadeout {
-      from {
-        opacity: 1; }
-      to {
-        opacity: 0; } }
+      background: rgba(0, 0, 0, 0.9); }
       .nav_links .active_nav li:first-of-type {
         margin-top: 10em; }
       .nav_links .active_nav li {
