@@ -11,26 +11,24 @@
 // JS code here handles DOM elements (presentation)
 
 (function makeResponsiveNavBarView() {
+  const active = document.querySelector('.active_nav');
+  const ham = document.querySelector('.hamburger_nav_button');
+
   function showResponsiveNavBar() {
-    const navToggle = document.querySelector('#nav_link_list');
-    const ham = document.querySelector('.hamburger_nav_button');
+    // Check if responsive navbar is shown or not
 
-    // Horizontally slide navbar in and out of view
-    navToggle.style.transition = '.5s';
-
-    // Check if navbar is active
-    if (navToggle.className) {
-      // If it is, slide out and remove the active class to hide it
-      navToggle.style.transform = 'translateX(100px)';
-      setTimeout(() => {
-        navToggle.classList.remove('active_nav');
-      }, 500);
-      ham.classList.remove('active_ham');
-    } else {
-      // If it isn't, add the active class to show it
+    if (ham.className === 'hamburger_nav_button') {
+      // Navbar is inactive
+      // Toggle navbar icon animation to X
       ham.classList.add('active_ham');
-      navToggle.classList.add('active_nav');
-      navToggle.style.transform = 'translateX(-300px)';
+      // Slide navbar into view
+      active.style.transform = 'translateX(-500px)';
+    } else {
+      // Navbar is active
+      // Toggle navbar icon animation to three lines
+      ham.classList.remove('active_ham');
+      // Slide navbar out of view
+      active.style.transform = 'translateX(100px)';
     }
   }
 

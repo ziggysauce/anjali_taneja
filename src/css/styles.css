@@ -67,8 +67,10 @@ html, body {
     .nav_links a:hover {
       color: #7E3A3A;
       border-bottom: 2px solid #7E3A3A; }
+  .nav_links .active_nav {
+    display: none; }
   @media (max-width: 900px) {
-    .nav_links li {
+    .nav_links #nav_link_list {
       display: none; }
     .nav_links .active_nav {
       display: flex;
@@ -77,9 +79,10 @@ html, body {
       position: fixed;
       height: 100%;
       z-index: 5;
-      right: -300px;
+      right: -500px;
       top: 0;
-      background: rgba(0, 0, 0, 0.9); }
+      background: rgba(0, 0, 0, 0.9);
+      transition: 0.3s; }
       .nav_links .active_nav li:first-of-type {
         margin-top: 10em; }
       .nav_links .active_nav li {

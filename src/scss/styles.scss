@@ -24,9 +24,7 @@ html, body {
   width: 100%;
   z-index: 5;
 
-  // background-color: $light_grey;
   background: rgba(255,255,255,0.8);
-  // color: $accent;
   color: $dark_grey;
 
   transition: ease-in-out 300ms;
@@ -68,18 +66,11 @@ html, body {
 
     li {
       height: 20px;
-
-    //   height: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
   }
-
-  // Hide mobile nav button
-  // li:last-child {
-  //   display: none;
-  // }
 
   .hamburger_nav_button {
     display: none;
@@ -90,7 +81,6 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // color: $medium_grey;
     color: $dark_grey;
     text-decoration: none;
     height: 95%;
@@ -99,16 +89,19 @@ html, body {
     text-transform: lowercase;
 
     &:hover {
-      // text-decoration: underline;
       color: $accent;
       border-bottom: 2px solid $accent;
     }
   }
 
+  .active_nav {
+    display: none;
+  }
+
   // CSS for tablet nav bar
   @media (max-width: 900px) {
 
-    li {
+    #nav_link_list {
       display: none;
     }
 
@@ -120,10 +113,10 @@ html, body {
       position: fixed;
       height: 100%;
       z-index: 5;
-      right: -300px;
+      right: -500px;
       top: 0;
       background: rgba(0,0,0,0.9);
-      // opacity: 0;
+      transition: 0.3s;
 
       li:first-of-type {
         margin-top: 10em;
@@ -136,19 +129,9 @@ html, body {
         width: 350px;
         height: 10%;
       }
-
-      // li:last-of-type {
-      //   display: flex;
-      //   position: absolute;
-      //   top: 0;
-      //   right: 0;
-      //   width: 50px;
-      //   height: 50px;
-      // }
     }
 
     a {
-      // padding: 25px 0px;
       display: flex;
       flex-direction: column;
       color: $medium_grey;
