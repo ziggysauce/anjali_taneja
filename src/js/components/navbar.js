@@ -13,6 +13,7 @@
 (function makeResponsiveNavBarView() {
   const active = document.querySelector('.active_nav');
   const ham = document.querySelector('.hamburger_nav_button');
+  const navwrap = document.querySelector('.navbar_wrapper');
 
   function showResponsiveNavBar() {
     // Check if responsive navbar is shown or not
@@ -32,7 +33,17 @@
     }
   }
 
+  function navBarScrollDown() {
+    navwrap.classList.add('nav_up');
+  }
+
+  function navBarScrollUp() {
+    navwrap.classList.remove('nav_up');
+  }
+
   window.app.navbarView = {
     showResponsiveNavBar,
+    navBarScrollDown,
+    navBarScrollUp,
   };
 }());

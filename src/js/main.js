@@ -48,6 +48,25 @@
     });
   }
 
+  function navBarScrollController() {
+    let curLoc = 0;
+
+    window.addEventListener('scroll', () => {
+      const scrollPos = () => { return window.scrollY; };
+      const curScroll = scrollPos();
+
+      // If scrolling down, call function to hide navbar
+      // Else if scrolling up, call finction to show navbar
+      if (curScroll > curLoc) {
+        curLoc = curScroll;
+        navbarView.navBarScrollDown();
+      } else {
+        curLoc = curScroll;
+        navbarView.navBarScrollUp();
+      }
+    });
+  }
+
   // Handles all event listeners
   function eventHandlers() {
     // add code here
@@ -57,6 +76,7 @@
     // List all controller functions here
     smoothScrollController();
     responsiveNavBarController();
+    navBarScrollController();
     eventHandlers();
   }
 
