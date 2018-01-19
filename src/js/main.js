@@ -48,6 +48,18 @@
     });
   }
 
+  function exitNavBar() {
+    // When clicking on a link, side navbar will disappear
+    const links = document.querySelectorAll('.active_nav li');
+
+    for (let i = 0; i < links.length; i += 1) {
+      links[i].addEventListener('click', (e) => {
+        e.preventDefault();
+        navbarView.showResponsiveNavBar();
+      });
+    }
+  }
+
   function navBarScrollController() {
     let curLoc = 0;
 
@@ -55,14 +67,17 @@
       const scrollPos = () => { return window.scrollY; };
       const curScroll = scrollPos();
 
-      // If scrolling down, call function to hide navbar
-      // Else if scrolling up, call finction to show navbar
-      if (curScroll > curLoc) {
-        curLoc = curScroll;
-        navbarView.navBarScrollDown();
-      } else {
-        curLoc = curScroll;
-        navbarView.navBarScrollUp();
+      // Check if responsive navbar is shown first
+      if (document.querySelector('.active_nav').style.transform !== 'translateX(-500px)') {
+        if (curScroll > curLoc) {
+          // If scrolling down, call function to hide navbar
+          curLoc = curScroll;
+          navbarView.navBarScrollDown();
+        } else {
+          // Else if scrolling up, call finction to show navbar
+          curLoc = curScroll;
+          navbarView.navBarScrollUp();
+        }
       }
     });
   }
@@ -76,6 +91,7 @@
     // List all controller functions here
     smoothScrollController();
     responsiveNavBarController();
+    exitNavBar();
     navBarScrollController();
     eventHandlers();
   }
