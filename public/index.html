@@ -134,10 +134,30 @@
       <div class="contact_content">
         <h2>Inquiries</h2>
         <form class="contact_form" action="index.html" method="post">
-          <input type="text" name="name" placeholder="name" required>
-          <input type="text" name="email_address" placeholder="email address" required>
-          <input type="text" name="subject" placeholder="subject" required>
-          <textarea name="message" placeholder="message..." required></textarea>
+          <div class="input_wrapper">
+            <span>
+              <input type="text" name="name" required>
+              <span class="floating_label">name</span>
+            </span>
+          </div>
+          <div class="input_wrapper">
+            <span>
+              <input type="text" name="email_address" required>
+              <span class="floating_label">email address</span>
+            </span>
+          </div>
+          <div class="input_wrapper">
+            <span>
+              <input type="text" name="subject" required>
+              <span class="floating_label">subject</span>
+            </span>
+          </div>
+          <div class="input_wrapper">
+            <span>
+              <textarea name="message" required></textarea>
+              <span class="floating_label">message...</span>
+            </span>
+          </div>
           <button type="submit" name="submit_message">submit</button>
         </form>
       </div>
