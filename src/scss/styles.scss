@@ -50,6 +50,11 @@ html, body {
   padding: 0px 10px 0px 50px;
 }
 
+#nav_logo {
+  font-family: 'Sacramento',cursive;
+  font-size: 2em;
+}
+
 .nav_links {
   padding-right: 50px;
 
@@ -90,7 +95,27 @@ html, body {
 
     &:hover {
       color: $accent;
-      border-bottom: 2px solid $accent;
+      // border-bottom: 2px solid $accent;
+    }
+  }
+
+  #nav_link_list a {
+    &:after {
+      content: '';
+      display: block;
+      margin: auto;
+      height: 1px;
+      width: 0px;
+      background: transparent;
+      transition: width .3s ease, background-color 0.3s ease;
+      -webkit-transition: width .3s ease, background-color 0.3s ease;
+      -moz-transition: width .3s ease, background-color 0.3s ease;
+    }
+
+    &:hover:after {
+      width: 100%;
+      padding-bottom: 2px;
+      background-color: $accent;
     }
   }
 
@@ -252,6 +277,8 @@ footer {
   padding: 15px;
 
   a {
+    font-family: 'Sacramento',cursive;
+    font-size: 3em;
     text-decoration: none;
     color: $medium_grey;
 

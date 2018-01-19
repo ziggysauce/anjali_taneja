@@ -34,6 +34,10 @@ html, body {
   justify-content: center;
   padding: 0px 10px 0px 50px; }
 
+#nav_logo {
+  font-family: 'Sacramento',cursive;
+  font-size: 2em; }
+
 .nav_links {
   padding-right: 50px; }
   .nav_links ul {
@@ -65,8 +69,21 @@ html, body {
     margin: 0px 20px;
     text-transform: lowercase; }
     .nav_links a:hover {
-      color: #7E3A3A;
-      border-bottom: 2px solid #7E3A3A; }
+      color: #7E3A3A; }
+  .nav_links #nav_link_list a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0px;
+    background: transparent;
+    transition: width .3s ease, background-color 0.3s ease;
+    -webkit-transition: width .3s ease, background-color 0.3s ease;
+    -moz-transition: width .3s ease, background-color 0.3s ease; }
+  .nav_links #nav_link_list a:hover:after {
+    width: 100%;
+    padding-bottom: 2px;
+    background-color: #7E3A3A; }
   .nav_links .active_nav {
     display: none; }
   @media (max-width: 900px) {
@@ -173,6 +190,8 @@ footer {
   justify-content: center;
   padding: 15px; }
   .artist_logo a {
+    font-family: 'Sacramento',cursive;
+    font-size: 3em;
     text-decoration: none;
     color: #6f6f6f; }
     .artist_logo a:hover {
