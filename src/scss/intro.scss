@@ -27,6 +27,9 @@ $light_grey: #f5f5f5;
   -moz-background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
+  -webkit-background-position: center;
+  -moz-background-position: center;
 }
 
 .intro_bg_overlay {
@@ -114,9 +117,9 @@ $light_grey: #f5f5f5;
     -webkit-background-size: cover;
     -moz-background-size: cover;
 
-    background-position: center;
-    -webkit-background-position: center;
-    -moz-background-position: center;
+    background-position: 80% 0;
+    -webkit-background-position: 80% 0;
+    -moz-background-position: 80% 0;
 
     background-attachment: scroll;
     -webkit-background-attachment: scroll;

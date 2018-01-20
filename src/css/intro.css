@@ -16,7 +16,10 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-position: center;
+  -moz-background-position: center; }
 
 .intro_bg_overlay {
   background: rgba(0, 0, 0, 0.3);
@@ -75,9 +78,9 @@
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-position: center;
-    -webkit-background-position: center;
-    -moz-background-position: center;
+    background-position: 80% 0;
+    -webkit-background-position: 80% 0;
+    -moz-background-position: 80% 0;
     background-attachment: scroll;
     -webkit-background-attachment: scroll;
     -moz-background-attachment: scroll; }
