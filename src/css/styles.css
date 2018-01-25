@@ -70,7 +70,7 @@ html, body {
     margin: 0px 20px;
     text-transform: lowercase; }
     .nav_links a:hover {
-      color: #7E3A3A; }
+      color: #F39B4D; }
   .nav_links #nav_link_list a:after {
     content: '';
     display: block;
@@ -84,7 +84,7 @@ html, body {
   .nav_links #nav_link_list a:hover:after {
     width: 100%;
     padding-bottom: 2px;
-    background-color: #7E3A3A; }
+    background-color: #F39B4D; }
   .nav_links .active_nav {
     display: none; }
   @media (max-width: 900px) {
@@ -114,7 +114,7 @@ html, body {
       flex-direction: column;
       color: #6f6f6f; }
       .nav_links a:hover {
-        color: #7E3A3A;
+        color: #F39B4D;
         border: 0px solid transparent; }
     .nav_links .iconbar:nth-of-type(1) {
       top: -6px; }
@@ -141,7 +141,7 @@ html, body {
       .nav_links .hamburger_nav_button .iconbar {
         background: #1f1f1f; }
       .nav_links .hamburger_nav_button:hover .iconbar {
-        background: #7E3A3A; }
+        background: #F39B4D; }
     .nav_links .active_ham .iconbar {
       background: #6f6f6f; }
     .nav_links .active_ham .iconbar:nth-of-type(1) {
@@ -217,4 +217,4 @@ footer {
     color: #6f6f6f;
     font-size: 1.5em; }
     .connect_links i:hover {
-      color: #7E3A3A; }
+      color: #F39B4D; }

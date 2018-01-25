@@ -1,7 +1,7 @@
 // Main styling sheet for webpage
 
 // Color Variables
-$accent: #7E3A3A;
+$accent: #F39B4D;
 $dark_grey: #1f1f1f;
 $medium_grey: #6f6f6f;
 $light_grey: #f5f5f5;
@@ -142,7 +142,7 @@ html, body {
       z-index: 5;
       right: -500px;
       top: 0;
-      background: rgba(0,0,0,0.9);
+      background: rgba(0,0,0,.9);
       transition: 0.3s;
 
       li:first-of-type {
