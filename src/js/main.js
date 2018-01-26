@@ -82,6 +82,45 @@
     });
   }
 
+  function highlightTabController() {
+    let position = window.scrollY;
+    const about = document.querySelector('#about_section').offsetTop - 50;
+    const video = document.querySelector('#video_section').offsetTop - 50;
+    const music = document.querySelector('#music_section').offsetTop - 50;
+    const cal = document.querySelector('#calendar_section').offsetTop - 50;
+    const pics = document.querySelector('#gallery_section').offsetTop - 50;
+    const contact = document.querySelector('#contact_section').offsetTop - 50;
+    const aboutTab = document.querySelector('#about_tab');
+    const videoTab = document.querySelector('#video_tab');
+    const musicTab = document.querySelector('#music_tab');
+    const calTab = document.querySelector('#calendar_tab');
+    const picsTab = document.querySelector('#gallery_tab');
+    const contactTab = document.querySelector('#contact_tab');
+
+
+    window.addEventListener('scroll', () => {
+      const scroll = () => { return window.scrollY; };
+      position = scroll();
+
+      // Check which tab the current position is in
+      if (about <= position && position < video) {
+        navbarView.highlightTab(aboutTab);
+      } else if (video <= position && position < music) {
+        navbarView.highlightTab(videoTab);
+      } else if (music <= position && position < cal) {
+        navbarView.highlightTab(musicTab);
+      } else if (cal <= position && position < pics) {
+        navbarView.highlightTab(calTab);
+      } else if (pics <= position && position < contact) {
+        navbarView.highlightTab(picsTab);
+      } else if (contact <= position) {
+        navbarView.highlightTab(contactTab);
+      } else {
+        navbarView.highlightTab();
+      }
+    });
+  }
+
   // Handles all event listeners
   function eventHandlers() {
     // add code here
@@ -93,6 +132,7 @@
     responsiveNavBarController();
     exitNavBar();
     navBarScrollController();
+    highlightTabController();
     eventHandlers();
   }
 

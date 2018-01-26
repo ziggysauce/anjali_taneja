@@ -41,9 +41,23 @@
     navwrap.classList.remove('nav_up');
   }
 
+  function highlightTab(tab) {
+    // Remove highlight from all tabs
+    const allTabs = document.querySelectorAll('#nav_link_list > li');
+    [].forEach.call(allTabs, (eachTab) => {
+      eachTab.style.background = '';
+    });
+
+    // Show active tab
+    if (tab) {
+      tab.style.background = '#F39B4D';
+    }
+  }
+
   window.app.navbarView = {
     showResponsiveNavBar,
     navBarScrollDown,
     navBarScrollUp,
+    highlightTab,
   };
 }());
