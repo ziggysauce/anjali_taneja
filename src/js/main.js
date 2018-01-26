@@ -82,14 +82,17 @@
     });
   }
 
+  /* ================================================================
+  =========-======== Highlight Navigation Bar =======================
+  ================================================================ */
   function highlightTabController() {
     let position = window.scrollY;
-    const about = document.querySelector('#about_section').offsetTop - 50;
-    const video = document.querySelector('#video_section').offsetTop - 50;
-    const music = document.querySelector('#music_section').offsetTop - 50;
-    const cal = document.querySelector('#calendar_section').offsetTop - 50;
-    const pics = document.querySelector('#gallery_section').offsetTop - 50;
-    const contact = document.querySelector('#contact_section').offsetTop - 50;
+    const about = document.querySelector('#about_section').offsetTop - 100;
+    const video = document.querySelector('#video_section').offsetTop - 100;
+    const music = document.querySelector('#music_section').offsetTop - 100;
+    const cal = document.querySelector('#calendar_section').offsetTop - 100;
+    const pics = document.querySelector('#gallery_section').offsetTop - 100;
+    const contact = document.querySelector('#contact_section').offsetTop - 100;
     const aboutTab = document.querySelector('#about_tab');
     const videoTab = document.querySelector('#video_tab');
     const musicTab = document.querySelector('#music_tab');
