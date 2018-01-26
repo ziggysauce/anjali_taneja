@@ -93,13 +93,6 @@
     const cal = document.querySelector('#calendar_section').offsetTop - 100;
     const pics = document.querySelector('#gallery_section').offsetTop - 100;
     const contact = document.querySelector('#contact_section').offsetTop - 100;
-    const aboutTab = document.querySelector('#about_tab');
-    const videoTab = document.querySelector('#video_tab');
-    const musicTab = document.querySelector('#music_tab');
-    const calTab = document.querySelector('#calendar_tab');
-    const picsTab = document.querySelector('#gallery_tab');
-    const contactTab = document.querySelector('#contact_tab');
-
 
     window.addEventListener('scroll', () => {
       const scroll = () => { return window.scrollY; };
@@ -107,17 +100,17 @@
 
       // Check which tab the current position is in
       if (about <= position && position < video) {
-        navbarView.highlightTab(aboutTab);
+        navbarView.highlightTab(document.querySelector('#about_tab'));
       } else if (video <= position && position < music) {
-        navbarView.highlightTab(videoTab);
+        navbarView.highlightTab(document.querySelector('#video_tab'));
       } else if (music <= position && position < cal) {
-        navbarView.highlightTab(musicTab);
+        navbarView.highlightTab(document.querySelector('#music_tab'));
       } else if (cal <= position && position < pics) {
-        navbarView.highlightTab(calTab);
+        navbarView.highlightTab(document.querySelector('#calendar_tab'));
       } else if (pics <= position && position < contact) {
-        navbarView.highlightTab(picsTab);
+        navbarView.highlightTab(document.querySelector('#gallery_tab'));
       } else if (contact <= position) {
-        navbarView.highlightTab(contactTab);
+        navbarView.highlightTab(document.querySelector('#contact_tab'));
       } else {
         navbarView.highlightTab();
       }
