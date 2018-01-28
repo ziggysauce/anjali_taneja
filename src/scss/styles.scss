@@ -1,7 +1,7 @@
 // Main styling sheet for webpage
 
 // Color Variables
-$accent: #7E3A3A;
+$accent: #F39B4D;
 $dark_grey: #1f1f1f;
 $medium_grey: #6f6f6f;
 $light_grey: #f5f5f5;
@@ -72,10 +72,15 @@ html, body {
     align-items: center;
 
     li {
-      height: 20px;
+      // height: 20px;
+      height: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      &:hover {
+        background: $accent;
+      }
     }
   }
 
@@ -88,15 +93,16 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    vertical-align: center;
     color: $dark_grey;
     text-decoration: none;
-    height: 95%;
+    height: 100%;
     padding: 0;
     margin: 0px 20px;
     text-transform: lowercase;
 
     &:hover {
-      color: $accent;
+      color: $light_grey;
       // border-bottom: 2px solid $accent;
     }
   }
@@ -105,7 +111,7 @@ html, body {
     &:after {
       content: '';
       display: block;
-      margin: auto;
+      margin: 0;
       height: 1px;
       width: 0px;
       background: transparent;
@@ -116,8 +122,8 @@ html, body {
 
     &:hover:after {
       width: 100%;
-      padding-bottom: 2px;
-      background-color: $accent;
+      padding-bottom: 1px;
+      background-color: $light_grey;
     }
   }
 
@@ -142,7 +148,7 @@ html, body {
       z-index: 5;
       right: -500px;
       top: 0;
-      background: rgba(0,0,0,0.9);
+      background: rgba(0,0,0,.9);
       transition: 0.3s;
 
       li:first-of-type {
@@ -155,10 +161,15 @@ html, body {
         text-align: center;
         width: 350px;
         height: 10%;
+
+        &:hover {
+          a { color: $light_grey; }
+        }
       }
     }
 
     a {
+      width: 100%;
       display: flex;
       flex-direction: column;
       color: $medium_grey;

@@ -82,6 +82,41 @@
     });
   }
 
+  /* ================================================================
+  =========-======== Highlight Navigation Bar =======================
+  ================================================================ */
+  function highlightTabController() {
+    let position = window.scrollY;
+    const about = document.querySelector('#about_section').offsetTop - 100;
+    const video = document.querySelector('#video_section').offsetTop - 100;
+    const music = document.querySelector('#music_section').offsetTop - 100;
+    const cal = document.querySelector('#calendar_section').offsetTop - 100;
+    const pics = document.querySelector('#gallery_section').offsetTop - 100;
+    const contact = document.querySelector('#contact_section').offsetTop - 100;
+
+    window.addEventListener('scroll', () => {
+      const scroll = () => { return window.scrollY; };
+      position = scroll();
+
+      // Check which tab the current position is in
+      if (about <= position && position < video) {
+        navbarView.highlightTab(document.querySelector('#about_tab'));
+      } else if (video <= position && position < music) {
+        navbarView.highlightTab(document.querySelector('#video_tab'));
+      } else if (music <= position && position < cal) {
+        navbarView.highlightTab(document.querySelector('#music_tab'));
+      } else if (cal <= position && position < pics) {
+        navbarView.highlightTab(document.querySelector('#calendar_tab'));
+      } else if (pics <= position && position < contact) {
+        navbarView.highlightTab(document.querySelector('#gallery_tab'));
+      } else if (contact <= position) {
+        navbarView.highlightTab(document.querySelector('#contact_tab'));
+      } else {
+        navbarView.highlightTab();
+      }
+    });
+  }
+
   // Handles all event listeners
   function eventHandlers() {
     // add code here
@@ -93,6 +128,7 @@
     responsiveNavBarController();
     exitNavBar();
     navBarScrollController();
+    highlightTabController();
     eventHandlers();
   }
 

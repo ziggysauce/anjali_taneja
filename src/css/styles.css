@@ -52,10 +52,12 @@ html, body {
     justify-content: space-between;
     align-items: center; }
     .nav_links ul li {
-      height: 20px;
+      height: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
+      .nav_links ul li:hover {
+        background: #F39B4D; }
   .nav_links .hamburger_nav_button {
     display: none; }
   .nav_links a {
@@ -63,18 +65,19 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    vertical-align: center;
     color: #1f1f1f;
     text-decoration: none;
-    height: 95%;
+    height: 100%;
     padding: 0;
     margin: 0px 20px;
     text-transform: lowercase; }
     .nav_links a:hover {
-      color: #7E3A3A; }
+      color: #f5f5f5; }
   .nav_links #nav_link_list a:after {
     content: '';
     display: block;
-    margin: auto;
+    margin: 0;
     height: 1px;
     width: 0px;
     background: transparent;
@@ -83,8 +86,8 @@ html, body {
     -moz-transition: width .3s ease, background-color 0.3s ease; }
   .nav_links #nav_link_list a:hover:after {
     width: 100%;
-    padding-bottom: 2px;
-    background-color: #7E3A3A; }
+    padding-bottom: 1px;
+    background-color: #f5f5f5; }
   .nav_links .active_nav {
     display: none; }
   @media (max-width: 900px) {
@@ -109,12 +112,15 @@ html, body {
         text-align: center;
         width: 350px;
         height: 10%; }
+        .nav_links .active_nav li:hover a {
+          color: #f5f5f5; }
     .nav_links a {
+      width: 100%;
       display: flex;
       flex-direction: column;
       color: #6f6f6f; }
       .nav_links a:hover {
-        color: #7E3A3A;
+        color: #F39B4D;
         border: 0px solid transparent; }
     .nav_links .iconbar:nth-of-type(1) {
       top: -6px; }
@@ -141,7 +147,7 @@ html, body {
       .nav_links .hamburger_nav_button .iconbar {
         background: #1f1f1f; }
       .nav_links .hamburger_nav_button:hover .iconbar {
-        background: #7E3A3A; }
+        background: #F39B4D; }
     .nav_links .active_ham .iconbar {
       background: #6f6f6f; }
     .nav_links .active_ham .iconbar:nth-of-type(1) {
@@ -217,4 +223,4 @@ footer {
     color: #6f6f6f;
     font-size: 1.5em; }
     .connect_links i:hover {
-      color: #7E3A3A; }
+      color: #F39B4D; }

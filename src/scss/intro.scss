@@ -1,5 +1,5 @@
 // Color Variables
-$accent: #EF994C;
+$accent: #F39B4D;
 $dark_grey: #1f1f1f;
 $medium_grey: #6f6f6f;
 $light_grey: #f5f5f5;
@@ -18,18 +18,14 @@ $light_grey: #f5f5f5;
   height: 100%;
   // left: 35%;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 0.7;
 
-  // background-image: url('../assets/img/intro_pic2.jpg');
   background-image: url('../assets/img/banner_3.jpg');
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
-  -webkit-background-position: center;
-  -moz-background-position: center;
 }
 
 .intro_bg_overlay {
@@ -92,7 +88,8 @@ $light_grey: #f5f5f5;
 
 #about_section {
   width: 100%;
-  color: #f5f5f5;
+  // color: #f5f5f5;
+  background-image: -webkit-linear-gradient(235deg, #f9f9f9 45%, $light_grey 35%);
   z-index: 2;
 }
 

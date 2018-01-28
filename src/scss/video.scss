@@ -1,19 +1,16 @@
 // Color Variables
-$accent: #7E3A3A;
+$accent: #EC4827;
 $dark_grey: #1f1f1f;
 $medium_grey: #6f6f6f;
 $light_grey: #f5f5f5;
 
 #video_section {
-  // border: 3px solid orange;
-  // height: calc(100vh - 5em);
-  background: linear-gradient(to bottom left, $accent, #EF994C);
+  background: linear-gradient(to bottom left, #F4B350, #EB974E);
+  // background: linear-gradient(to bottom left, #F0BD81, #F39B4D);
   color: $light_grey;
-  // opacity: 0.8;
 }
 
 .video_content {
-  // border: 1px solid blue;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -28,12 +25,11 @@ $light_grey: #f5f5f5;
     width: 60%;
     height: 35vw;
 
-    box-shadow: 2px 2px 10px 2px $accent;
+    box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.3);
   }
 }
 
 .video_description {
-  // border: 2px solid yellow;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +55,7 @@ $light_grey: #f5f5f5;
 
     &:hover {
       background: $light_grey;
-      color: $accent;
+      color: #c0392b;
       transition: .3s;
       -webkit-transition: .3s;
       -moz-transition: .3s;
