@@ -12,6 +12,28 @@ html, body {
   font-family: 'Raleway', sans-serif;
 }
 
+#to_top {
+  z-index: 5;
+  position: fixed;
+  bottom: 0;
+  right: 1vw;
+  font-size: 2.5em;
+  width: 30px;
+  height: 40px;
+  text-align: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  transition: 0.3s;
+  color: $medium_grey;
+
+  &:hover {
+    color: $accent;
+    background: $light_grey;
+    transition: 0.3s;
+  }
+}
+
 /* ----------------------------------------
 ------------ NAVBAR STYLES ----------------
 ---------------------------------------- */
@@ -97,8 +119,8 @@ html, body {
     color: $dark_grey;
     text-decoration: none;
     height: 100%;
-    padding: 0;
-    margin: 0px 20px;
+    padding: 0px 20px;
+    margin: 0;
     text-transform: lowercase;
 
     &:hover {

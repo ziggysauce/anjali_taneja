@@ -87,12 +87,12 @@
   ================================================================ */
   function highlightTabController() {
     let position = window.scrollY;
-    const about = document.querySelector('#about_section').offsetTop - 100;
-    const video = document.querySelector('#video_section').offsetTop - 100;
-    const music = document.querySelector('#music_section').offsetTop - 100;
-    const cal = document.querySelector('#calendar_section').offsetTop - 100;
-    const pics = document.querySelector('#gallery_section').offsetTop - 100;
-    const contact = document.querySelector('#contact_section').offsetTop - 100;
+    const about = document.querySelector('#about_section').offsetTop;
+    const video = document.querySelector('#video_section').offsetTop;
+    const music = document.querySelector('#music_section').offsetTop;
+    const cal = document.querySelector('#calendar_section').offsetTop;
+    const pics = document.querySelector('#gallery_section').offsetTop;
+    const contact = document.querySelector('#contact_section').offsetTop;
 
     window.addEventListener('scroll', () => {
       const scroll = () => { return window.scrollY; };
