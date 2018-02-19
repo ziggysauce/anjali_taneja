@@ -1,8 +1,4 @@
-// Color Variables
-$accent: #ff3c03;
-$dark_grey: #1f1f1f;
-$medium_grey: #6f6f6f;
-$light_grey: #f5f5f5;
+@import './colors.scss';
 
 #gallery_section {
   background: $light_grey;
@@ -11,36 +7,36 @@ $light_grey: #f5f5f5;
   align-items: center;
   text-align: center;
   padding-bottom: 2em;
+}
 
-  a {
-    border: 2px solid $dark_grey;
-    color: $dark_grey;
+.link_ref {
+  border: 2px solid $dark_grey;
+  color: $dark_grey;
 
-    width: 300px;
-    padding: 20px 5px;
-    margin: 50px 0px 20px 0px;
+  width: 300px;
+  padding: 20px 5px;
+  margin: 50px 0px 20px 0px;
 
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
 
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+
+  &:hover {
+    background: $dark_grey;
+    color: $light_grey;
     transition: .3s;
     -webkit-transition: .3s;
     -moz-transition: .3s;
+  }
 
-    &:hover {
-      background: $dark_grey;
-      color: $light_grey;
-      transition: .3s;
-      -webkit-transition: .3s;
-      -moz-transition: .3s;
-    }
-
-    i {
-      padding: 0px 5px;
-      font-size: 2em;
-      vertical-align: middle;
-    }
+  i {
+    padding: 0px 5px;
+    font-size: 2em;
+    vertical-align: middle;
   }
 }
 
@@ -54,10 +50,14 @@ $light_grey: #f5f5f5;
   justify-content: center;
   align-items: center;
 
-  img {
-    min-width: 250px;
+  a {
     width: 30%;
     margin: 10px;
+  }
+
+  img {
+    min-width: 250px;
+    width: 100%;
     opacity: .8;
     box-shadow: 0px 2px 10px 0px #a2a2a2;
     transition: 0.5s;

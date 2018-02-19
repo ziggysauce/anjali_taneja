@@ -15,7 +15,7 @@ html, body {
   transition: 0.3s;
   color: #6f6f6f; }
   #to_top:hover {
-    color: #F39B4D;
+    color: #00c489;
     background: #f5f5f5;
     transition: 0.3s; }
 
@@ -73,7 +73,7 @@ html, body {
       justify-content: center;
       align-items: center; }
       .nav_links ul li:hover {
-        background: #F39B4D; }
+        background: #00c489; }
   .nav_links .hamburger_nav_button {
     display: none; }
   .nav_links a {
@@ -136,7 +136,7 @@ html, body {
       flex-direction: column;
       color: #6f6f6f; }
       .nav_links a:hover {
-        color: #F39B4D;
+        color: #00c489;
         border: 0px solid transparent; }
     .nav_links .iconbar:nth-of-type(1) {
       top: -6px; }
@@ -163,7 +163,7 @@ html, body {
       .nav_links .hamburger_nav_button .iconbar {
         background: #1f1f1f; }
       .nav_links .hamburger_nav_button:hover .iconbar {
-        background: #F39B4D; }
+        background: #00c489; }
     .nav_links .active_ham .iconbar {
       background: #6f6f6f; }
     .nav_links .active_ham .iconbar:nth-of-type(1) {
@@ -239,4 +239,4 @@ footer {
     color: #6f6f6f;
     font-size: 1.5em; }
     .connect_links i:hover {
-      color: #F39B4D; }
+      color: #00c489; }
