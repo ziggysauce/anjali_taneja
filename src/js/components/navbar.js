@@ -50,7 +50,7 @@
 
     // Show active tab
     if (tab) {
-      tab.style.background = '#F39B4D';
+      tab.style.background = '#fc625d';
     }
   }
 

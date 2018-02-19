@@ -15,7 +15,7 @@ html, body {
   transition: 0.3s;
   color: #6f6f6f; }
   #to_top:hover {
-    color: #00c489;
+    color: #fc625d;
     background: #f5f5f5;
     transition: 0.3s; }
 
@@ -73,7 +73,7 @@ html, body {
       justify-content: center;
       align-items: center; }
       .nav_links ul li:hover {
-        background: #00c489; }
+        background: #fc625d; }
   .nav_links .hamburger_nav_button {
     display: none; }
   .nav_links a {
@@ -135,9 +135,6 @@ html, body {
       display: flex;
       flex-direction: column;
       color: #6f6f6f; }
-      .nav_links a:hover {
-        color: #00c489;
-        border: 0px solid transparent; }
     .nav_links .iconbar:nth-of-type(1) {
       top: -6px; }
     .nav_links .iconbar:nth-of-type(2) {
@@ -162,8 +159,6 @@ html, body {
       z-index: 10; }
       .nav_links .hamburger_nav_button .iconbar {
         background: #1f1f1f; }
-      .nav_links .hamburger_nav_button:hover .iconbar {
-        background: #00c489; }
     .nav_links .active_ham .iconbar {
       background: #6f6f6f; }
     .nav_links .active_ham .iconbar:nth-of-type(1) {
@@ -184,11 +179,20 @@ html, body {
       transform: rotate(-45deg); } }
 
 @media (max-width: 465px) {
+  #to_top {
+    transition: 0.3s;
+    color: #fc625d; }
+    #to_top:hover {
+      color: #fc625d;
+      background: none;
+      transition: 0.3s; }
   .active_nav {
     height: 100%;
     width: 100%; }
-    .active_nav li:not(:last-of-type) {
-      width: 100% !important; } }
+    .active_nav li {
+      width: 100% !important; }
+      .active_nav li a {
+        font-size: 2em; } }
 
 /* ----------------------------------------
 ------------ FOOTER STYLES ----------------
@@ -239,4 +243,4 @@ footer {
     color: #6f6f6f;
     font-size: 1.5em; }
     .connect_links i:hover {
-      color: #00c489; }
+      color: #fc625d; }

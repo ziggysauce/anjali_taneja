@@ -192,10 +192,10 @@ html, body {
       flex-direction: column;
       color: $medium_grey;
 
-      &:hover {
-        color: $accent;
-        border: 0px solid transparent;
-      }
+      // &:hover {
+      //   color: $accent;
+      //   border: 0px solid transparent;
+      // }
     }
 
     // Hamburger Styles and animation
@@ -232,9 +232,9 @@ html, body {
 
       .iconbar { background: $dark_grey; }
 
-      &:hover {
-        .iconbar { background: $accent; }
-      }
+      // &:hover {
+      //   .iconbar { background: $accent; }
+      // }
     }
 
     .active_ham {
@@ -266,16 +266,27 @@ html, body {
 }
 
 @media (max-width: 465px) {
-  .navbar_wrapper {
+  #to_top {
+    transition: 0.3s;
+    color: $accent;
+  
+    &:hover {
+      color: $accent;
+      background: none;
+      transition: 0.3s;
+    }
   }
 
   .active_nav {
-    // make no scroll later
     height: 100%;
     width: 100%;
 
-    li:not(:last-of-type) {
+    li {
       width: 100% !important;
+
+      a {
+        font-size: 2em;
+      }
     }
   }
 }
