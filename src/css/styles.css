@@ -15,8 +15,8 @@ html, body {
   transition: 0.3s;
   color: #6f6f6f; }
   #to_top:hover {
-    color: #fc625d;
-    background: #f5f5f5;
+    color: #1f1f1f;
+    background: #f9eab1;
     transition: 0.3s; }
 
 /* ----------------------------------------
@@ -55,6 +55,9 @@ html, body {
   font-family: 'Sacramento',cursive;
   font-size: 2em; }
 
+.logo_img {
+  width: 8em; }
+
 .nav_links {
   padding-right: 50px; }
   .nav_links ul {
@@ -73,7 +76,7 @@ html, body {
       justify-content: center;
       align-items: center; }
       .nav_links ul li:hover {
-        background: #fc625d; }
+        background: #f9eab1; }
   .nav_links .hamburger_nav_button {
     display: none; }
   .nav_links a {
@@ -89,7 +92,7 @@ html, body {
     margin: 0;
     text-transform: lowercase; }
     .nav_links a:hover {
-      color: #f5f5f5; }
+      color: #1f1f1f; }
   .nav_links #nav_link_list a:after {
     content: '';
     display: block;
@@ -103,7 +106,7 @@ html, body {
   .nav_links #nav_link_list a:hover:after {
     width: 100%;
     padding-bottom: 1px;
-    background-color: #f5f5f5; }
+    background-color: #1f1f1f; }
   .nav_links .active_nav {
     display: none; }
   @media (max-width: 900px) {
@@ -129,7 +132,7 @@ html, body {
         width: 350px;
         height: 10%; }
         .nav_links .active_nav li:hover a {
-          color: #f5f5f5; }
+          color: #1f1f1f; }
     .nav_links a {
       width: 100%;
       display: flex;
@@ -181,9 +184,9 @@ html, body {
 @media (max-width: 465px) {
   #to_top {
     transition: 0.3s;
-    color: #fc625d; }
+    color: #f9eab1; }
     #to_top:hover {
-      color: #fc625d;
+      color: #f9eab1;
       background: none;
       transition: 0.3s; }
   .active_nav {
@@ -215,14 +218,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 15px; }
-  .artist_logo a {
-    font-family: 'Sacramento',cursive;
-    font-size: 3em;
-    text-decoration: none;
-    color: #6f6f6f; }
-    .artist_logo a:hover {
-      color: #fff; }
+  padding-bottom: 10px; }
 
 .contact_info {
   display: flex;
@@ -243,4 +239,4 @@ footer {
     color: #6f6f6f;
     font-size: 1.5em; }
     .connect_links i:hover {
-      color: #fc625d; }
+      color: #f9eab1; }

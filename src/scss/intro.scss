@@ -4,7 +4,7 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
-  background: #4d2a19;
+  // background: #4d2a19;
 }
 
 .intro_content {
@@ -15,7 +15,7 @@
   z-index: 1;
   opacity: 1;
 
-  background-image: url('https://s19.postimg.org/8pc6aeakz/banner_fin.jpg');
+  background-image: url('https://s19.postimg.org/5ytc19wmb/IMG_0347.jpg');
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -47,11 +47,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   h1 {
     font-weight: 400;
     font-family: 'Sacramento',cursive;
     font-size: 6em;
+  }
+
+  .logo_img_intro {
+    width: 20em;
+    padding-bottom: 10px;
   }
 }
 
@@ -125,6 +131,10 @@
     justify-content: flex-end;
     align-items: center;
   }
+
+  .logo_img_intro {
+    width: 12em !important;
+  }
 }
 
 // CSS for mobile intro section
@@ -133,5 +143,9 @@
     font-size: 0.5em;
     margin: 0;
     padding: 0px 0px 20px 0px;
+  }
+
+  .logo_img_intro {
+    width: 10em !important;
   }
 }

@@ -24,8 +24,8 @@ html, body {
   color: $medium_grey;
 
   &:hover {
-    color: $accent;
-    background: $light_grey;
+    color: $dark-grey;
+    background: $accent;
     transition: 0.3s;
   }
 }
@@ -75,6 +75,10 @@ html, body {
   font-size: 2em;
 }
 
+.logo_img {
+  width: 8em;
+}
+
 .nav_links {
   padding-right: 50px;
 
@@ -120,7 +124,7 @@ html, body {
     text-transform: lowercase;
 
     &:hover {
-      color: $light_grey;
+      color: $dark_grey;
       // border-bottom: 2px solid $accent;
     }
   }
@@ -141,7 +145,7 @@ html, body {
     &:hover:after {
       width: 100%;
       padding-bottom: 1px;
-      background-color: $light_grey;
+      background-color: $dark_grey;
     }
   }
 
@@ -181,7 +185,7 @@ html, body {
         height: 10%;
 
         &:hover {
-          a { color: $light_grey; }
+          a { color: $dark_grey; }
         }
       }
     }
@@ -315,19 +319,18 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-bottom: 10px;
 
-  padding: 15px;
+  // a {
+  //   font-family: 'Sacramento',cursive;
+  //   font-size: 3em;
+  //   text-decoration: none;
+  //   color: $medium_grey;
 
-  a {
-    font-family: 'Sacramento',cursive;
-    font-size: 3em;
-    text-decoration: none;
-    color: $medium_grey;
-
-    &:hover {
-      color: #fff;
-    }
-  }
+  //   &:hover {
+  //     color: #fff;
+  //   }
+  // }
 }
 
 .contact_info {
