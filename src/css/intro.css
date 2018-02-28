@@ -7,10 +7,10 @@
   content: ' ';
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1;
   opacity: 1;
-  background-image: url("https://s19.postimg.org/5ytc19wmb/IMG_0347.jpg");
+  background-image: url("https://s19.postimg.org/8pc6aeakz/banner_fin.jpg");
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -18,9 +18,8 @@
   background-attachment: fixed; }
 
 .intro_bg_overlay {
-  background: rgba(0, 0, 0, 0.3);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
-  height: 100%;
+  height: 100vh;
   width: 60%;
   position: absolute;
   z-index: 2; }
