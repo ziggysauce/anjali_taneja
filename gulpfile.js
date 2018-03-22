@@ -31,7 +31,7 @@ gulp.task('css', () => {
     .pipe(concat('styles.css'))
     .pipe(cssnano())
     .pipe(sourcemaps.write('../maps'))
-    .pipe(gulp.dest('public/css/'))
+    .pipe(gulp.dest('css/'))
     .pipe(reload({ stream: true }));
 
   return stream;
@@ -52,7 +52,7 @@ gulp.task('js', () => {
     .pipe(concat('app.min.js'))
     .pipe(minify())
     .pipe(sourcemaps.write('../maps'))
-    .pipe(gulp.dest('public/js'))
+    .pipe(gulp.dest('js'))
     .pipe(reload({ stream: true }));
 });
 
@@ -67,19 +67,19 @@ gulp.task('html', () => {
       css: '<link rel="stylesheet" href="css/styles.css">',
       js: '<script src="js/app.min.js" defer></script>',
     }))
-    .pipe(gulp.dest('public'))
+    .pipe(gulp.dest(''))
     .pipe(reload({ stream: true }));
 });
 
 // clears dist/assets folder before copying new assets from src/assets
 // runs when 'assets' is called
-gulp.task('cleanfolder', () => del(['public/assets/**']));
+gulp.task('cleanfolder', () => del(['assets/**']));
 
 // copies new/changed assets into dist/assets
 // when called, runs 'cleanfolder' first
 gulp.task('assets', ['cleanfolder'], () => {
   const stream = gulp.src(['src/assets/**/*'])
-    .pipe(gulp.dest('public/assets'))
+    .pipe(gulp.dest('assets'))
     .pipe(reload({ stream: true }));
 
   return stream;
@@ -91,7 +91,7 @@ gulp.task('assets', ['cleanfolder'], () => {
 gulp.task('browser-sync', () => {
   browserSync({
     server: {
-      baseDir: './public',
+      baseDir: '',
     },
   });
 });
