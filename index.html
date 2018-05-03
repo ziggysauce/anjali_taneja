@@ -20,7 +20,9 @@
 
     <link rel="stylesheet" href="css/styles.css">
 
+
     <script src="js/app.min.js" defer></script>
+
   </head>
   <body>
 
@@ -142,7 +144,7 @@
     <section id="contact_section"> <!-- CONTACT -->
       <div class="contact_content">
         <h2>inquiries</h2>
-        <form class="contact_form" action="index.html" method="post">
+        <!-- <form class="contact_form" action="index.html" method="post">
           <div class="input_wrapper">
             <span>
               <input type="text" name="name" required>
@@ -168,7 +170,15 @@
             </span>
           </div>
           <button type="submit" name="submit_message">submit</button>
+        </form> -->
+        <form name="submit-to-google-sheet">
+            <input name="first_name" type="text" placeholder="First Name" required>
+            <input name="last_name" type="text" placeholder="Last Name" required>
+            <input name="email" type="email" placeholder="Email" required>
+            <input name="message" type="text" placeholder="Message" required>
+            <button type="submit">Subscribe</button>
         </form>
+        <!-- <p class="js-success-message is-hidden">Success!</p> -->
       </div>
     </section> <!-- CONTACT -->
 
@@ -193,5 +203,17 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const scriptURL = 'https://script.google.com/a/umich.edu/macros/s/AKfycbzE2QtYguxDcSB5QCtasgBRWhwJzxwFqSj-U4-z15udtlTNsQ/exec'
+      const form = document.forms['submit-to-google-sheet']
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
   </body>
 </html>
