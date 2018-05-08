@@ -64,7 +64,7 @@
     let curLoc = 0;
 
     window.addEventListener('scroll', () => {
-      const scrollPos = () => { return window.scrollY; };
+      const scrollPos = () => window.scrollY;
       const curScroll = scrollPos();
 
       // Check if responsive navbar is shown first
@@ -83,7 +83,7 @@
   }
 
   /* ================================================================
-  =========-======== Highlight Navigation Bar =======================
+  ================== Highlight Navigation Bar =======================
   ================================================================ */
   function highlightTabController() {
     let position = window.scrollY;
@@ -95,7 +95,7 @@
     const contact = document.querySelector('#contact_section').offsetTop;
 
     window.addEventListener('scroll', () => {
-      const scroll = () => { return window.scrollY; };
+      const scroll = () => window.scrollY;
       position = scroll();
 
       // Check which tab the current position is in
@@ -117,9 +117,22 @@
     });
   }
 
-  // Handles all event listeners
-  function eventHandlers() {
-    // add code here
+  /* ================================================================
+  ======================= FORM SUBMISSION ===========================
+  ================================================================ */
+  function handleFormSubmit() {
+    const scriptURL = 'https://script.google.com/a/umich.edu/macros/s/AKfycbzE2QtYguxDcSB5QCtasgBRWhwJzxwFqSj-U4-z15udtlTNsQ/exec';
+    const form = document.querySelector('.contact_form');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(() => {
+          alert('Message successfully sent!'); // alert lets user know their message was sent
+          window.location.reload(); // refresh page
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
   }
 
   function runAll() {
@@ -129,7 +142,7 @@
     exitNavBar();
     navBarScrollController();
     highlightTabController();
-    eventHandlers();
+    handleFormSubmit();
   }
 
   window.app.controller = {
