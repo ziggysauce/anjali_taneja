@@ -95,6 +95,21 @@
       -webkit-transition: .3s;
       -moz-transition: .3s; }
 
+.form_modal {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+  .form_modal h1 {
+    color: black;
+    font-size: 3em; }
+
 @media (max-width: 465px) {
   form {
     width: 300px; } }
