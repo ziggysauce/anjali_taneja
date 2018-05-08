@@ -142,33 +142,36 @@
     <section id="contact_section"> <!-- CONTACT -->
       <div class="contact_content">
         <h2>inquiries</h2>
-        <form class="contact_form" action="index.html" method="post">
+        <form class="contact_form" name="submit-to-google-sheet">
           <div class="input_wrapper">
             <span>
               <input type="text" name="name" required>
-              <span class="floating_label">name</span>
+              <span class="floating_label">Name</span>
             </span>
           </div>
           <div class="input_wrapper">
             <span>
               <input type="text" name="email_address" required>
-              <span class="floating_label">email address</span>
+              <span class="floating_label">Email address</span>
             </span>
           </div>
           <div class="input_wrapper">
             <span>
               <input type="text" name="subject" required>
-              <span class="floating_label">subject</span>
+              <span class="floating_label">Subject</span>
             </span>
           </div>
           <div class="input_wrapper">
             <span>
               <textarea name="message" required></textarea>
-              <span class="floating_label">message...</span>
+              <span class="floating_label">Message...</span>
             </span>
           </div>
-          <button type="submit" name="submit_message">submit</button>
+          <button type="submit">submit</button>
         </form>
+      </div>
+      <div class="form_modal">
+        <h1>Message successfully sent!</h1>
       </div>
     </section> <!-- CONTACT -->
 

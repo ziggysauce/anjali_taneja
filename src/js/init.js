@@ -3,5 +3,5 @@
 (function init() {
   window.app = {
     // created functions are sent here
-  }
+  };
 }());
