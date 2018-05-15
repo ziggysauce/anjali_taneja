@@ -4,7 +4,8 @@
   "description": "Artist webpage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,6 @@
   "license": "ISC",
   "homepage": "https://github.com/ziggysauce/anjali_taneja#readme",
   "devDependencies": {
-    "ajv": "5.0.0",
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
     "eslint": "^4.15.0",
@@ -28,7 +28,6 @@
     "gulp-html-replace": "^1.6.2",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
-    "hoek": "^5.0.3"
+    "gulp-sourcemaps": "^2.6.1"
   }
 }

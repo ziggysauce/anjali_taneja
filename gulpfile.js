@@ -10,7 +10,7 @@ const minify = require('gulp-babel-minify'); // for minifying js
 const htmlReplace = require('gulp-html-replace'); // for editing specific lines of html between src and dist
 const browserSync = require('browser-sync'); // for automatic reloading of page in browser, and for viewing page on multiple devices
 
-const reload = browserSync.reload; // see browserSync above
+const { reload } = browserSync; // see browserSync above
 
 // compiles sass to css.
 gulp.task('scss', () => {
