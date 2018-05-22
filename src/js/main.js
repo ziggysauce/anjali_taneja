@@ -157,4 +157,13 @@
   };
 }());
 
-window.app.controller.runAll();
+// Hide page until fully loaded
+document.querySelector('body').style.display = 'none';
+
+window.addEventListener('load', () => {
+  window.app.controller.runAll();
+
+  // Display page after fully loaded
+  document.querySelector('body').style.display = '';
+});
+

@@ -11,7 +11,7 @@ html, body {
 #to_top {
   z-index: 5;
   position: fixed;
-  bottom: 0;
+  bottom: 10px;
   right: 1vw;
   font-size: 2.5em;
   width: 30px;
@@ -21,11 +21,15 @@ html, body {
   // flex-direction: column;
   // justify-content: center;
   transition: 0.3s;
+  border: 1px solid $medium_grey;
+  border-radius: 100%;
   color: $medium_grey;
+  padding: 0px 5px;
 
   &:hover {
-    color: $dark-grey;
-    background: $accent;
+    background: $light-grey;
+    color: $primary;
+    border: 1px solid $light_grey;
     transition: 0.3s;
   }
 }
@@ -76,7 +80,7 @@ html, body {
 }
 
 .logo_img {
-  width: 8em;
+  height: 75%;
 }
 
 .nav_links {
@@ -124,7 +128,7 @@ html, body {
     text-transform: lowercase;
 
     &:hover {
-      color: $dark_grey;
+      color: $light_grey;
       // border-bottom: 2px solid $accent;
     }
   }
@@ -145,7 +149,7 @@ html, body {
     &:hover:after {
       width: 100%;
       padding-bottom: 1px;
-      background-color: $dark_grey;
+      background-color: $light_grey;
     }
   }
 
@@ -321,16 +325,19 @@ footer {
   justify-content: center;
   padding-bottom: 10px;
 
-  // a {
-  //   font-family: 'Sacramento',cursive;
-  //   font-size: 3em;
-  //   text-decoration: none;
-  //   color: $medium_grey;
+  a {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-decoration: none;
+    color: $medium_grey;
+    transition: 0.3s;
 
-  //   &:hover {
-  //     color: #fff;
-  //   }
-  // }
+    &:hover {
+      color: #fff;
+      transition: 0.3s;
+    }
+  }
 }
 
 .contact_info {
@@ -357,7 +364,7 @@ footer {
     font-size: 1.5em;
 
     &:hover {
-      color: $accent;
+      color: $primary;
     }
   }
 }
