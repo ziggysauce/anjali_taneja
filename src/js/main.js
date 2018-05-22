@@ -158,12 +158,12 @@
 }());
 
 // Hide page until fully loaded
-document.querySelector('body').style.display = 'none';
+document.querySelector('body').style.opacity = '0';
 
 window.addEventListener('load', () => {
   window.app.controller.runAll();
 
   // Display page after fully loaded
-  document.querySelector('body').style.display = '';
+  document.querySelector('body').style.opacity = '1';
 });
 
