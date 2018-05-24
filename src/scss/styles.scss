@@ -276,11 +276,18 @@ html, body {
 @media (max-width: 465px) {
   #to_top {
     transition: 0.3s;
-    color: $accent;
+    color: $medium_grey;
+    position: fixed;
+    bottom: 5px;
+    right: 1vw;
+    font-size: 1em;
+    width: 10px;
+    height: 20px;
   
     &:hover {
-      color: $accent;
       background: none;
+      color: $primary;
+      border: 1px solid $light_grey;
       transition: 0.3s;
     }
   }

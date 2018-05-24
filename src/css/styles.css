@@ -188,10 +188,17 @@ html, body {
 @media (max-width: 465px) {
   #to_top {
     transition: 0.3s;
-    color: #851F33; }
+    color: #6f6f6f;
+    position: fixed;
+    bottom: 5px;
+    right: 1vw;
+    font-size: 1em;
+    width: 10px;
+    height: 20px; }
     #to_top:hover {
-      color: #851F33;
       background: none;
+      color: #F4B350;
+      border: 1px solid #f5f5f5;
       transition: 0.3s; }
   .active_nav {
     height: 100%;
