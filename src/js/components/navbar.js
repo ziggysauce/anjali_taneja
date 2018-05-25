@@ -48,9 +48,17 @@
       eachTab.style.background = '';
     });
 
+    // Make text black for all tabs
+    const allText = document.querySelectorAll('#nav_link_list > li > a');
+    [].forEach.call(allText, (anchor) => {
+      anchor.style.color = '';
+    });
+
     // Show active tab
     if (tab) {
-      tab.style.background = '#f9eab1';
+      const link = tab.querySelector('a');
+      tab.style.background = '#851F33';
+      link.style.color = '#f5f5f5';
     }
   }
 

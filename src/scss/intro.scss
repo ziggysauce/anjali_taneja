@@ -15,7 +15,7 @@
   z-index: 1;
   opacity: 1;
 
-  background-image: url('https://image.ibb.co/iE28U7/banner_fin.jpg');
+  background-image: url('../assets/img/banner_fin.jpg');
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -50,14 +50,11 @@
   align-items: center;
 
   h1 {
-    font-weight: 400;
-    font-family: 'Sacramento',cursive;
-    font-size: 6em;
-  }
-
-  .logo_img_intro {
-    width: 20em;
-    padding-bottom: 10px;
+    font-weight: 100;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 4em;
+    margin: 0;
   }
 }
 
@@ -74,9 +71,11 @@
   i {
     color: $light_grey;
     font-size: 2em;
+    transition: 0.3s;
 
     &:hover {
-      color: $accent;
+      color: $primary;
+      transition: 0.3s;
     }
   }
 }
@@ -126,14 +125,11 @@
     height: 100%;
     width: 100%;
     z-index: 2;
+    padding: 0;
 
     background: linear-gradient(to top, rgba(0,0,0, 0.8), rgba(0,0,0,0));
     justify-content: flex-end;
     align-items: center;
-  }
-
-  .logo_img_intro {
-    width: 12em !important;
   }
 }
 
@@ -142,10 +138,12 @@
   .intro_social_media {
     font-size: 0.5em;
     margin: 0;
-    padding: 0px 0px 20px 0px;
+    padding: 0px 0px 40vh 0px;
   }
 
-  .logo_img_intro {
-    width: 10em !important;
+  .intro_description_wrapper {
+    h1 {
+      font-size: 2.5em;
+    }
   }
 }
