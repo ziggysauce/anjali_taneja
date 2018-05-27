@@ -9,6 +9,7 @@ const cssnano = require('gulp-cssnano'); // for minifying css
 const minify = require('gulp-babel-minify'); // for minifying js
 const htmlReplace = require('gulp-html-replace'); // for editing specific lines of html between src and dist
 const browserSync = require('browser-sync'); // for automatic reloading of page in browser, and for viewing page on multiple devices
+const imagemin = require('gulp-imagemin'); // minify png, jpeg, gif, and svg
 
 const { reload } = browserSync; // see browserSync above
 
@@ -71,7 +72,7 @@ gulp.task('html', () => {
     .pipe(reload({ stream: true }));
 });
 
-// clears dist/assets folder before copying new assets from src/assets
+// clears assets folder before copying new assets from src/assets
 // runs when 'assets' is called
 gulp.task('cleanfolder', () => del(['assets/**']));
 
@@ -79,6 +80,8 @@ gulp.task('cleanfolder', () => del(['assets/**']));
 // when called, runs 'cleanfolder' first
 gulp.task('assets', ['cleanfolder'], () => {
   const stream = gulp.src(['src/assets/**/*'])
+    .pipe(plumber())
+    .pipe(imagemin())
     .pipe(gulp.dest('assets'))
     .pipe(reload({ stream: true }));
 
