@@ -7,7 +7,6 @@ const concat = require('gulp-concat'); // for combining multiple files into one 
 const sass = require('gulp-sass'); // for compiling Sass into css
 const cssnano = require('gulp-cssnano'); // for minifying css
 const minify = require('gulp-babel-minify'); // for minifying js
-const htmlmin = require('gulp-htmlmin'); // miniying html
 const htmlReplace = require('gulp-html-replace'); // for editing specific lines of html between src and dist
 const browserSync = require('browser-sync'); // for automatic reloading of page in browser, and for viewing page on multiple devices
 const imagemin = require('gulp-imagemin'); // minify png, jpeg, gif, and svg
@@ -69,7 +68,6 @@ gulp.task('html', () => {
       css: '<link rel="stylesheet" href="css/styles.css">',
       js: '<script src="js/app.min.js" defer></script>',
     }))
-    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest(''))
     .pipe(reload({ stream: true }));
 });
