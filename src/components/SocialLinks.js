@@ -9,7 +9,7 @@ library.add(fab, faEnvelope);
 class SocialLinks extends Component {
   render() {
     return (
-      <div className="">
+      <div className="w-100 d-flex justify-content-around">
           <FontAwesomeIcon icon={['fab', 'youtube']} />
           <FontAwesomeIcon icon={['fab', 'soundcloud']} />
           <FontAwesomeIcon icon={['fab', 'spotify']} />
