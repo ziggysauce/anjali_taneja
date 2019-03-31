@@ -1,7 +1,0 @@
-# MacOS Files
-.DS_Store
-
-node_modules
-
-# Hide src folder
-src/
