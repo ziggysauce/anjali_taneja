@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Video extends Component {
   render() {
     return (
-      <div className="w-100 d-flex justify-content-around">
+      <div id="video-section" className="min-vh-100 w-100 bg-dark text-light d-flex justify-content-around">
         <p>Video Section</p>
       </div>
     );
