@@ -11,9 +11,24 @@
 module.exports = {
   events: [
     {
-      date: "June 15",
-      time: "9:00 PM",
-      location: "Gypsy Sally's (Washington, D.C.)",
+      date: "April 24",
+      location: "Strathmore Mansion",
+      details: "",
+    },
+    {
+      date: "April 27",
+      location: "Shakti Rising",
+      details: "Non-Profit Event",
+    },
+    {
+      date: "May 4",
+      location: "Strathmore Gala",
+      details: "",
+    },
+    {
+      date: "May 22",
+      location: "Union Stage",
+      details: "",
     },
   ]
 };

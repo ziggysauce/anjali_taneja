@@ -45,15 +45,9 @@ code {
 }
 
 .bg-gradient {
-  background: linear-gradient(#000000, #ec9c83);
+  background: linear-gradient(#202020 40%, #ec9c83 100%);
 }
 
 .bg-black {
   background: #000000;
-}
-
-.bg-landing-img {
-  background-image: url('./assets/at_landing.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
 }

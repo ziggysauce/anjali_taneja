@@ -10,19 +10,21 @@ class Events extends Component {
 
   render() {
     return (
-      <div id="events-section" className="min-vh-100 w-100 bg-dark text-light d-flex justify-content-around">
-        <p>Events Section</p>
-        {this.state.events.map(({date, location, time}, idx) => {
-          return (
-            <div key={idx} className="row">
-              <div class="col-6 text-right d-flex flex-column">
-                <p class="mb-0">{date}</p>
-                <p class="mb-0">{time}</p>
+      <div id="events-section" className="min-vh-100 w-100 bg-dark text-light d-flex justify-content-around border border-primary">
+        <p class="mb-0 w-50 border border-danger">Events Section</p>
+        <div className="w-50 d-flex flex-column justify-content-around border border-success">
+          {this.state.events.map(({date, location, details}, idx) => {
+            return (
+              <div key={idx} className="row">
+                <p class="col-4 h4 text-right mb-0">{date}</p>
+                <div class="col-8 text-left d-flex flex-column">
+                  <p class="h4 text-left mb-0">{location}</p>
+                  <p class="mb-0">{details}</p>
+                </div>
               </div>
-              <p class="col-6 text-left mb-0">{location}</p>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     );
   }

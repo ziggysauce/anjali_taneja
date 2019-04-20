@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { SocialLinks } from '../components';
 import AnjaliTanejaLogo from '../assets/anjali_taneja_logo.png';
-// import ATLanding from '../assets/at_landing.jpg';
+import AnjaliTanejaLanding from '../assets/at_landing.jpg';
 
 class Landing extends Component {
   render() {
@@ -12,7 +12,7 @@ class Landing extends Component {
         </div>
         <div className="d-flex flex-column flex-md-row w-100">
           <div className="w-100 h-100 d-flex flex-column justify-content-end bg-landing-img">
-            {/*<img src={ATLanding} alt="anjali taneja" className="w-100" />*/}
+            <img src={AnjaliTanejaLanding} alt="anjali taneja" className="w-100" />
           </div>
           <div className="w-100 h-100 bg-gradient d-none d-md-flex flex-column justify-content-center align-items-center">
             <img src={AnjaliTanejaLogo} alt="anjali taneja logo" className="w-50" />
