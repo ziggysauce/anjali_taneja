@@ -30,7 +30,7 @@ class Contact extends Component {
             </form>
           </div>
         </div>
-        <div className="w-100 bg-black d-flex justify-content-between align-items-center px-3">
+        <div className="w-100 bg-off-black d-flex justify-content-between align-items-center px-3">
           <p class="mb-0 text-light font-weight-bold text-uppercase pl-3">Anjali Taneja</p>
           <SocialLinks></SocialLinks>
         </div>

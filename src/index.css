@@ -48,6 +48,6 @@ code {
   background: linear-gradient(#202020 40%, #ec9c83 100%);
 }
 
-.bg-black {
-  background: #000000;
+.bg-off-black {
+  background: #202020;
 }
