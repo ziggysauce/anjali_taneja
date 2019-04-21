@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Navigation } from './components/index';
-import { Landing, Music, Video, Events, Merch, Contact } from './pages';
+import { Landing, Music, Video, Events, Contact } from './pages'; // Include Merch when needed
 
 class App extends Component {
   render() {
@@ -12,7 +12,10 @@ class App extends Component {
         <Music></Music>
         <Video></Video>
         <Events></Events>
-        <Merch></Merch>
+        {/*
+          * Hide merchanidse section for now
+          <Merch></Merch>
+        */}
         <Contact></Contact>
       </div>
     );

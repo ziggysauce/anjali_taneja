@@ -3,11 +3,12 @@ import AnjaliTanejaMusic from '../assets/at_music.jpg';
 
 const Music = () => {
   return (
-    <div id="music-section" className="min-vh-100 w-100 bg-dark text-light d-flex justify-content-around">
-      <div class="border border-primary col-6">
+    <div id="music-section" className="w-100 bg-off-black text-light d-flex flex-wrap justify-content-around">
+      <div className="col-12 col-md-6">
         <p>STUFF 1</p>
         </div>
-      <div class="border border-warning col-6 p-0">
+      <div className="col-12 col-md-6 p-0">
+        <div className="img-hover z1"></div>
         <img src={AnjaliTanejaMusic} alt="anjali taneja" className="w-100 h-100" />
       </div>
     </div>

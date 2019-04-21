@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EventsAPI from '../api/Events';
+import AnjaliTanejaEvents from '../assets/at_events.jpg';
 
 class Events extends Component {
   state = { events: EventsAPI.events }
@@ -10,16 +11,19 @@ class Events extends Component {
 
   render() {
     return (
-      <div id="events-section" className="min-vh-100 w-100 bg-dark text-light d-flex justify-content-around border border-primary">
-        <p class="mb-0 w-50 border border-danger">Events Section</p>
-        <div className="w-50 d-flex flex-column justify-content-around border border-success">
+      <div id="events-section" className="w-100 bg-salmon d-flex flex-wrap text-light">
+        <div className="col-12 col-md-6 p-0">
+          <div className="img-hover z1"></div>
+          <img src={AnjaliTanejaEvents} alt="anjali taneja" className="w-100 h-100" />
+        </div>
+        <div className="col-12 col-md-6 d-flex flex-column justify-content-around">
           {this.state.events.map(({date, location, details}, idx) => {
             return (
               <div key={idx} className="row">
-                <p class="col-4 h4 text-right mb-0">{date}</p>
-                <div class="col-8 text-left d-flex flex-column">
-                  <p class="h4 text-left mb-0">{location}</p>
-                  <p class="mb-0">{details}</p>
+                <p className="col-4 h4 text-right mb-0">{date}</p>
+                <div className="col-8 text-left d-flex flex-column">
+                  <p className="h4 text-left mb-0">{location}</p>
+                  <p className="mb-0">{details}</p>
                 </div>
               </div>
             );
