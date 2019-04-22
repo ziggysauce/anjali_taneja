@@ -26,10 +26,12 @@ code {
 .btn-link {
   cursor: pointer;
   color: #FFFFFF !important;
+  transition: .3s;
 }
 
 .btn-link:hover {
   color: #ec9c83 !important;
+  transition: .3s;
 }
 
 /**********************
