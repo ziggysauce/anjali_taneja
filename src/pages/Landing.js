@@ -12,9 +12,9 @@ class Landing extends Component {
         </div>
         <div className="d-flex flex-column flex-md-row">
           <div className="col-12 col-md-6 p-0 h-100 d-flex flex-column justify-content-end bg-landing-img">
-              <div className="img-hover">
-                <img src={AnjaliTanejaLanding} alt="anjali taneja" className="w-100" />
-              </div>
+            <div className="img-hover">
+              <img src={AnjaliTanejaLanding} alt="anjali taneja" className="w-100" />
+            </div>
           </div>
           <div className="col-12 col-md-6 h-100 bg-gradient d-none d-md-flex flex-column justify-content-center align-items-center">
             <img src={AnjaliTanejaLogo} alt="anjali taneja logo" className="w-50" />
