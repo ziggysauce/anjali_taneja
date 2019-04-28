@@ -17,7 +17,7 @@ code {
 
 /**********************
   BOOTSTRAP OVERRIDES
-*********************/
+***********************/
 
 .dropdown-menu {
   left: 1.5em !important;
@@ -30,7 +30,7 @@ code {
 }
 
 .btn-link:hover {
-  color: #ec9c83 !important;
+  color: #EC9C83 !important;
   transition: .3s;
 }
 
@@ -46,8 +46,14 @@ code {
   min-height: 100vh;
 }
 
+.bg-black {
+  background: linear-gradient(rgba(55, 52, 63, 1) 0%, rgba(8, 7, 9, 1) 50%);
+  /* background: linear-gradient(#b9dddb 0%, rgba(8, 7, 9, 1) 50%); */
+}
+
 .bg-gradient {
-  background: linear-gradient(#202020 40%, #b9dddb 100%);
+  /* background: linear-gradient(#202020 40%, #b9dddb 100%); */
+  background: linear-gradient(rgba(8, 7, 9, 1) 0%, rgba(55, 52, 63, 1) 50%);
 }
 
 .bg-salmon {
@@ -55,7 +61,7 @@ code {
   /* background: rgb(185, 221, 219); */
   /* background: #b9dddb; */
   /* background: rgb(255, 176, 162); */
-  background: #ec9c83;
+  background: #EC9C83;
 }
 
 .bg-aqua {

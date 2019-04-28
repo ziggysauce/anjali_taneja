@@ -6,8 +6,8 @@ class Contact extends Component {
     return (
       <div id="contact-section" className="min-vh-100 w-100 bg-salmon text-light d-flex flex-column justify-content-between align-items-center">
         <div className="w-100 vh-100 d-flex flex-column flex-md-row justify-content-center align-items-center bg-salmon text-light">
-          <div className="w-100 h-100 d-flex flex-column">ABOUT</div>
-          <div className="w-100 h-100 bg-aqua px-3 d-flex flex-column justify-content-center">
+          <div className="col-12 col-md-6 h-100 d-flex flex-column">ABOUT</div>
+          <div className="col-12 col-md-6 h-100 bg-aqua px-3 d-flex flex-column justify-content-center">
             <h2>Inquiries</h2>
             <form>
               <div className="form-group">
