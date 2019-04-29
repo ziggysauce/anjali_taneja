@@ -11,7 +11,7 @@ class Landing extends Component {
           <SocialLinks></SocialLinks>
         </div>
         <div className="d-flex flex-column flex-md-row">
-          <div className="col-12 col-md-6 p-0 h-100 d-flex flex-column justify-content-end bg-landing-img">
+          <div className="col-12 col-md-6 p-0 h-100 d-flex flex-column justify-content-end bg-salmon">
             <div className="img-hover">
               <img src={AnjaliTanejaLanding} alt="anjali taneja" className="w-100" />
             </div>

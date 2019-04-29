@@ -30,13 +30,14 @@ code {
 }
 
 .btn-link:hover {
-  color: #EC9C83 !important;
+  /* color: #EC9C83 !important; */
+  color: #B9DDDB !important;
   transition: .3s;
 }
 
 /**********************
   BOOTSTRAP OVERRIDES
-*********************/
+***********************/
 
 .z-99 {
   z-index: 99;
@@ -53,7 +54,8 @@ code {
 
 .bg-gradient {
   /* background: linear-gradient(#202020 40%, #b9dddb 100%); */
-  background: linear-gradient(rgba(8, 7, 9, 1) 0%, rgba(55, 52, 63, 1) 50%);
+  background: linear-gradient(#EC9C83 50%, #FFFFFF 100%);
+  /* background: linear-gradient(rgba(8, 7, 9, 1) 0%, rgba(55, 52, 63, 1) 50%); */
 }
 
 .bg-salmon {
@@ -112,7 +114,7 @@ code {
 } */
 
 .img-hover:hover {
-  opacity: .7;
+  opacity: .5;
   transition: .5s ease-in-out;
   background: -webkit-linear-gradient(top, rgba(32, 32, 32, 0) 50%, rgba(185, 221, 219, 1) 100%);
   background: -o-linear-gradient(top, rgba(32, 32, 32, 0) 50%,rgba(185, 221, 219, 1) 100%);

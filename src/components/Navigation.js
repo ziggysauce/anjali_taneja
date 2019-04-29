@@ -18,7 +18,7 @@ class Navigation extends Component {
     return (
       <div className="position-fixed pl-4 pt-4 z-99">
         <div onClick={this.toggleNav} className="d-flex">
-          <FontAwesomeIcon icon={this.state.navExpanded ? 'times' : 'bars'} className="h3 text-light" />
+          <FontAwesomeIcon icon={this.state.navExpanded ? 'times' : 'bars'} className="h3 text-light m-0" />
           <p className="mb-0 ml-3 font-weight-bold text-uppercase text-light">Menu</p>
         </div>
         <div className={this.state.navExpanded ? 'dropdown-menu show' : 'd-none'}>

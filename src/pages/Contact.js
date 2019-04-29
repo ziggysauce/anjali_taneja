@@ -26,7 +26,7 @@ class Contact extends Component {
                 <label className="text-light w-100 text-left" htmlFor="contact-message">Message...</label>
                 <textarea id="contact-message" className="form-control" rows="3"></textarea>
               </div>
-              <button className="btn font-weight-bold text-uppercase">Submit</button>
+              <button className="btn btn-dark font-weight-bold text-uppercase">Submit</button>
             </form>
           </div>
         </div>
