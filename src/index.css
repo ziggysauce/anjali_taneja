@@ -5,14 +5,13 @@ body {
   padding: 0;
   font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 /**********************
@@ -21,6 +20,19 @@ code {
 
 .dropdown-menu {
   left: 1.5em !important;
+  background-color: #EC9C83 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow: 0px 7px 10px 0px rgb(39, 39, 39) !important;
+}
+
+.dropdown-item {
+  color: #FFFFFF !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #FFFFFF !important;
+  background-color: #B9DDDB !important;
 }
 
 .btn-link {
@@ -35,15 +47,43 @@ code {
   transition: .3s;
 }
 
+.form-control {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #FFFFFF !important;
+  border-radius: 0 !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+.form-control::placeholder {
+  color: #FFFFFF !important;
+}
+
 /**********************
   BOOTSTRAP OVERRIDES
 ***********************/
+
+.btn-white {
+  background-color: #FFFFFF !important;
+  color: #37343F !important;
+  transition: 0.3s;
+}
+
+.btn-white:hover {
+  background-color: #B9DDDB !important;
+  transition: 0.3s;
+}
 
 .z-99 {
   z-index: 99;
 }
 
-.min-vh-100 {
+.min-vh {
   min-height: 100vh;
 }
 
@@ -53,16 +93,10 @@ code {
 }
 
 .bg-gradient {
-  /* background: linear-gradient(#202020 40%, #b9dddb 100%); */
   background: linear-gradient(#EC9C83 50%, #FFFFFF 100%);
-  /* background: linear-gradient(rgba(8, 7, 9, 1) 0%, rgba(55, 52, 63, 1) 50%); */
 }
 
 .bg-salmon {
-  /* background: #B9DDDB; */
-  /* background: rgb(185, 221, 219); */
-  /* background: #b9dddb; */
-  /* background: rgb(255, 176, 162); */
   background: #EC9C83;
 }
 
@@ -82,42 +116,51 @@ code {
   z-index: -1;
 }
 
-  /* background-image: linear-gradient(rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.4)), url('./assets/at_landing.jpg'); */
+.social-link-font {
+  font-size: 1.25rem;
+}
 
 .img-hover {
   transition: .5s ease-in-out;
-  /* position: absolute;  <!-- To absolutely position color gradient over image -- > */
   height: 100%;
   width: 100%;
   opacity: 1;
-  background: -webkit-linear-gradient(top, rgba(32, 32, 32, 0) 0%, rgba(185, 221, 219, 1) 100%);
-  background: -o-linear-gradient(top, rgba(32, 32, 32, 0) 0%,rgba(185, 221, 219, 1) 100%);
-  background: -ms-linear-gradient(top, rgba(32, 32, 32, 0) 0%,rgba(185, 221, 219, 1) 100%);
-  background: linear-gradient(to bottom, rgba(32, 32, 32, 0) 0%,rgba(185, 221, 219, 1) 100%);
-
-  /* background: -webkit-linear-gradient(top, rgba(32, 32, 32, 1) 0%, rgba(32, 32, 32, 0) 100%);
-  background: -o-linear-gradient(top, rgba(32, 32, 32, 1) 0%,rgba(32, 32, 32, 0) 100%);
-  background: -ms-linear-gradient(top, rgba(32, 32, 32, 1) 0%,rgba(32, 32, 32, 0) 100%);
-  background: linear-gradient(to bottom, rgba(32, 32, 32, 1) 0%,rgba(32, 32, 32, 0) 100%); */
 }
-
-/* .img-hover::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease;
-  background-color: rgba(246, 150, 121, 0.75);
-} */
 
 .img-hover:hover {
   opacity: .5;
   transition: .5s ease-in-out;
-  background: -webkit-linear-gradient(top, rgba(32, 32, 32, 0) 50%, rgba(185, 221, 219, 1) 100%);
-  background: -o-linear-gradient(top, rgba(32, 32, 32, 0) 50%,rgba(185, 221, 219, 1) 100%);
-  background: -ms-linear-gradient(top, rgba(32, 32, 32, 0) 50%,rgba(185, 221, 219, 1) 100%);
-  background: linear-gradient(to bottom, rgba(32, 32, 32, 0) 50%,rgba(185, 221, 219, 1) 100%);
+}
+
+@media (max-width: 768px) {
+  .social-link-font {
+    font-size: .75rem;
+  }
+
+  .min-vh {
+    min-height: 50vh;
+  }
+
+  .img-hover {
+    opacity: .3;
+  }
+
+  .events-mobile {
+    position: absolute !important;
+    height: 100%;
+  }
+}
+
+.photo-cred {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: rgba(255, 255, 255, .7);
+}
+
+.landing-name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30%;
 }
