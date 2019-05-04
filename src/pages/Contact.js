@@ -3,27 +3,67 @@ import { SocialLinks } from '../components';
 import AnjaliTanejaContact from '../assets/at_contact.jpg';
 
 class Contact extends Component {
+  state = {
+    submitMsg: false,
+    errorMsg: false,
+  }
+
+  submitForm = (e) => {
+    e.preventDefault();
+    const scriptURL = 'https://script.google.com/a/umich.edu/macros/s/AKfycbzE2QtYguxDcSB5QCtasgBRWhwJzxwFqSj-U4-z15udtlTNsQ/exec';
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const form = document.querySelector('.contact-form');
+    const formData = {};
+    formData.name = document.querySelector('#contact-name').value;
+    formData.email = document.querySelector('#contact-email').value;
+    formData.subject = document.querySelector('#contact-subject').value;
+    formData.message = document.querySelector('#contact-message').value;
+    console.log('FORM DATA: ', formData);
+    if(formData.email === '' || formData.message === '') {
+      this.setState({ errorMsg: true });
+    } else {
+      this.setState({ errorMsg: false });
+      fetch(`${proxyUrl}${scriptURL}`, {
+        method: 'POST',
+        // mode: 'cors',
+        body: formData,
+      }).then((res) => {
+        console.log(res);
+        this.setState({ submitMsg: !this.state.submitMsg });
+        setTimeout(() => {
+          this.setState({ submitMsg: !this.state.submitMsg });
+          form.reset();
+        }, 5000);
+      }).catch((error) => {
+        console.error('Error!', error.message);
+        alert('Sorry, there was an error while trying to send your message.');
+      });
+    }
+  }
+
   render() {
     return (
       <div id="contact-section" className="w-100 text-light d-flex flex-column justify-content-between align-items-center">
         <div className="w-100 d-flex flex-column flex-md-row justify-content-center align-items-center bg-salmon text-light">
           <div className="col-12 col-md-6 h-100 px-3 d-flex flex-column justify-content-center align-items-center py-5">
             <h2 className="text-uppercase font-weight-bold display-4 mb-5">Inquiries</h2>
-            <form className="w-75">
+            <form className="w-75 contact-form" name="submit-to-google-sheet">
               <div className="form-group">
-                <input id="contact-name" className="form-control px-0" placeholder="Name" type="text" />
+                <input id="contact-name" name="name" className="form-control px-0" placeholder="Name" type="text" />
               </div>
               <div className="form-group">
-                <input id="contact-email" className="form-control px-0" placeholder="Email" type="email" />
+                <input id="contact-email" name="email_address" className="form-control px-0" placeholder="Email" type="email" />
               </div>
               <div className="form-group">
-                <input id="contact-subject" className="form-control px-0" placeholder="Subject" type="text" />
+                <input id="contact-subject" name="subject" className="form-control px-0" placeholder="Subject" type="text" />
               </div>
               <div className="form-group">
-                <textarea id="contact-message" className="form-control px-0" placeholder="Message..." rows="2"></textarea>
+                <textarea id="contact-message" name="message" className="form-control px-0" placeholder="Message..." rows="2"></textarea>
               </div>
-              <button className="btn btn-white btn-lg rounded-0 font-weight-bold text-uppercase">Submit</button>
+              <button onClick={this.submitForm} type="submit" className="btn btn-white btn-lg rounded-0 font-weight-bold text-uppercase">Submit</button>
             </form>
+            <h4 className={this.state.submitMsg ? 'd-flex mt-3' : 'd-none'}>Thank you! Your message has been sent.</h4>
+            <h5 className={this.state.errorMsg ? 'd-flex mt-3' : 'd-none'}>Please enter a valid email and message.</h5>
           </div>
           <div className="col-12 col-md-6 h-100 p-0 bg-salmon d-none d-md-flex">
             <div className="img-hover">
