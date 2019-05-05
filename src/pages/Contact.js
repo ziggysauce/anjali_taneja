@@ -33,7 +33,6 @@ class Contact extends Component {
       fetch(`${proxyUrl}${scriptURL}?${formData.name},_==_,${formData.email},_==_,${formData.subject},_==_,${formData.message}`, {
         method: 'POST',
       }).then((res) => {
-        console.log(res);
         this.setState({ submitMsg: !this.state.submitMsg });
         setTimeout(() => {
           this.setState({ submitMsg: !this.state.submitMsg });
