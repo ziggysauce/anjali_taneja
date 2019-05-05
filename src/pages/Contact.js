@@ -10,23 +10,28 @@ class Contact extends Component {
 
   submitForm = (e) => {
     e.preventDefault();
-    const scriptURL = 'https://script.google.com/a/umich.edu/macros/s/AKfycbzE2QtYguxDcSB5QCtasgBRWhwJzxwFqSj-U4-z15udtlTNsQ/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyxieKl8F0Hls0JfM9HtBM6NDFso2t8X4QJITy1rp3od1HGkFdM/exec';
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     const form = document.querySelector('.contact-form');
     const formData = {};
-    formData.name = document.querySelector('#contact-name').value;
-    formData.email = document.querySelector('#contact-email').value;
-    formData.subject = document.querySelector('#contact-subject').value;
-    formData.message = document.querySelector('#contact-message').value;
-    console.log('FORM DATA: ', formData);
-    if(formData.email === '' || formData.message === '') {
+    formData.name = document.querySelector('#contact-name').value.length > 0
+      ? document.querySelector('#contact-name').value
+      : 'n/a';
+    formData.email = document.querySelector('#contact-email').value.length > 0
+      ? document.querySelector('#contact-email').value
+      : 'n/a';
+    formData.subject = document.querySelector('#contact-subject').value.length > 0
+      ? document.querySelector('#contact-subject').value
+      : 'n/a';
+    formData.message = document.querySelector('#contact-message').value.length > 0
+      ? document.querySelector('#contact-message').value
+      : 'n/a';
+    if(formData.email === 'n/a' || formData.message === 'n/a') {
       this.setState({ errorMsg: true });
     } else {
       this.setState({ errorMsg: false });
-      fetch(`${proxyUrl}${scriptURL}`, {
+      fetch(`${proxyUrl}${scriptURL}?${formData.name},_==_,${formData.email},_==_,${formData.subject},_==_,${formData.message}`, {
         method: 'POST',
-        // mode: 'cors',
-        body: formData,
       }).then((res) => {
         console.log(res);
         this.setState({ submitMsg: !this.state.submitMsg });
