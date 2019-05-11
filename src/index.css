@@ -68,6 +68,20 @@ code {
   BOOTSTRAP OVERRIDES
 ***********************/
 
+
+/**********************
+  REACT BOOTSTRAP OVERRIDES
+***********************/
+
+.carousel-control-prev, .carousel-control-next {
+  top: 20% !important;
+  height: 50% !important;
+}
+
+/**********************
+  REACT BOOTSTRAP OVERRIDES
+***********************/
+
 .btn-white {
   background-color: #FFFFFF !important;
   color: #37343F !important;
@@ -102,6 +116,10 @@ code {
 
 .bg-aqua {
   background: #B9DDDB;
+}
+
+.bg-black {
+  background: #000000;
 }
 
 .bg-off-black {
