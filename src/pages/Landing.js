@@ -1,7 +1,11 @@
 import React from 'react';
 import { SocialLinks } from '../components';
-import AnjaliTanejaLogo from '../assets/anjali_taneja_logo.png';
 import AnjaliTanejaLanding from '../assets/at_landing.jpg';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faArrowRight);
 
 const Landing = () => {
   return (
@@ -18,8 +22,11 @@ const Landing = () => {
           <h1 className="position-absolute pt-3 font-weight-bold text-uppercase text-light display-4 d-flex d-md-none landing-name">Anjali Taneja</h1>
         </div>
         <div className="col-12 col-md-6 h-100 bg-gradient d-none d-md-flex flex-column justify-content-center align-items-center">
-          <img src={AnjaliTanejaLogo} alt="anjali taneja logo" className="w-50" />
           <h1 className="pt-3 font-weight-bold text-uppercase text-light display-4">Anjali Taneja</h1>
+          <a href="/" class="btn btn-link">
+            <span class="h2 pr-3">Listen Now</span>
+            <span class="h4"><FontAwesomeIcon icon="arrow-right" /></span>
+          </a>
         </div>
       </div>
     </div>
