@@ -23,9 +23,9 @@ const Landing = () => {
         </div>
         <div className="col-12 col-md-6 h-100 bg-gradient d-none d-md-flex flex-column justify-content-center align-items-center">
           <h1 className="pt-3 font-weight-bold text-uppercase text-light display-4">Anjali Taneja</h1>
-          <a href="/" class="btn btn-link">
-            <span class="h2 pr-3">Listen Now</span>
-            <span class="h4"><FontAwesomeIcon icon="arrow-right" /></span>
+          <a href="https://linktr.ee/anjalixmusic" target="_blank" rel="noopener noreferrer" className="btn btn-link">
+            <span className="h2 pr-3">Listen Now</span>
+            <span className="h4"><FontAwesomeIcon icon="arrow-right" /></span>
           </a>
         </div>
       </div>

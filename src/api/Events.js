@@ -11,14 +11,14 @@
 module.exports = {
   events: [
     {
-      date: "May 22",
-      location: "Union Stage",
-      details: "Washington, DC",
+      date: "June 18",
+      location: "Rockwood Music Hall",
+      details: "New York City",
     },
     {
-      date: "May 24",
-      location: "SoFar Sounds, NYC",
-      details: "Brooklyn, NY",
+      date: "June 21",
+      location: "Strathmore - Asbury Village",
+      details: "Bethesda, MD",
     },
     {
       date: "June 30",
