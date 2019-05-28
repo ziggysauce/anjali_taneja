@@ -16,6 +16,7 @@ Artist webpage for Anjali Taneja, based in Washington, D.C. Includes her biograp
 [License](https://github.com/ziggysauce/anjali_taneja/blob/master/LICENSE.md)
 
 ## Built With
+* This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 * HTML5
 * CSS3
 * JavaScript

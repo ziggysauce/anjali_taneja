@@ -1,34 +1,34 @@
 {
-  "name": "anjali-taneja",
-  "version": "1.0.0",
+  "name": "anjali_taneja",
+  "version": "2.0.0",
   "description": "Artist webpage",
-  "main": "index.js",
+  "homepage": "https://github.com/ziggysauce/anjali_taneja",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-brands-svg-icons": "^5.8.1",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "bootstrap": "^4.3.1",
+    "i": "^0.3.6",
+    "npm": "^6.9.0",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6",
+    "react-scripts": "2.1.8"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ziggysauce/anjali_taneja.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "homepage": "https://github.com/ziggysauce/anjali_taneja#readme",
-  "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "del": "^3.0.0",
-    "eslint": "^4.15.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "gulp": "^3.9.1",
-    "gulp-babel-minify": "^0.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-html-replace": "^1.6.2",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1"
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
