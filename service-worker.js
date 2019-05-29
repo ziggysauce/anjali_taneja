@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/anjali_taneja/public/precache-manifest.ef4a9ddcf3b27d5ef145ec3000090fbb.js"
+  "anjalitaneja.com/precache-manifest.98509447aa9d2c287cd4bc83c0f360ab.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/anjali_taneja/public/index.html", {
+workbox.routing.registerNavigationRoute("anjalitaneja.com/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
