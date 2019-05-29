@@ -2,7 +2,7 @@
   "name": "anjali_taneja",
   "version": "2.0.0",
   "description": "Artist webpage",
-  "homepage": "https://ziggysauce.github.io/anjali_taneja/public/",
+  "homepage": "https://ziggysauce.github.io",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-brands-svg-icons": "^5.8.1",
