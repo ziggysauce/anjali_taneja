@@ -4,7 +4,7 @@
 ```
 {
   date: "[Insert date here]",
-  location: "[Insert  location here]"
+  location: "[Insert location here]"
   details: "[Insert any details here]"
 }
 ```
