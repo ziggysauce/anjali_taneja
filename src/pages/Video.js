@@ -11,9 +11,9 @@ const Video = () => {
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen>
       </iframe>
-      <iframe src="https://www.youtube.com/embed/fCnCZvr2S7s"
+      <iframe src="https://www.youtube.com/watch?v=iXSxrdQIHFU"
         className="w-100 min-vh mb-5"
-        title="Anjali Taneja YouTube Video"
+        title="Anjali Taneja - Got It"
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen>

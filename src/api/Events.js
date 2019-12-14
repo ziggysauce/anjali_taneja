@@ -11,19 +11,19 @@
 module.exports = {
   events: [
     {
-      date: "June 18",
-      location: "Rockwood Music Hall",
-      details: "New York City",
+      date: "July 25",
+      location: "SoFar Sounds / Hyatt Centric",
+      details: "Washington, D.C.",
     },
     {
-      date: "June 21",
-      location: "Strathmore - Asbury Village",
-      details: "Bethesda, MD",
+      date: "September 21",
+      location: "Terminal 5",
+      details: "Sessions NYC",
     },
     {
-      date: "June 30",
-      location: "DC9",
-      details: "Washington, DC",
+      date: "November 12",
+      location: "Kennedy Center: Millennium Stage",
+      details: "Washington, D.C.",
     },
     {
       date: "",
