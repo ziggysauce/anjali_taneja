@@ -11,20 +11,7 @@ const Video = () => {
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen>
       </iframe>
-      <iframe src="https://www.youtube.com/embed/iXSxrdQIHFU"
-        className="w-100 min-vh mb-5"
-        title="Anjali Taneja - Got It"
-        frameBorder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen>
-      </iframe>
-      <iframe src="https://www.youtube.com/embed/1hkS3pZYtks"
-        className="w-100 min-vh mb-5"
-        title="Anjali Taneja - Live"
-        frameBorder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen>
-      </iframe>
+  
     </div>
   );
 }
