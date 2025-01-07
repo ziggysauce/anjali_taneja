@@ -12,7 +12,7 @@ module.exports = {
   events: [
     {
       date: "July 25",
-      location: "SoFar Sounds / Hyatt Centric",
+      location: "SoFar Sounds",
       details: "Washington, D.C.",
     },
     {
